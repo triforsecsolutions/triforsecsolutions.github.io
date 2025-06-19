@@ -7,6 +7,20 @@
   <title>TriforSec Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    body {{
+      animation: fadeIn 0.8s ease-in-out;
+    }}
+    @keyframes fadeIn {{
+      from {{ opacity: 0; transform: translateY(20px); }}
+      to {{ opacity: 1; transform: translateY(0); }}
+    }}
+    .card {{
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }}
+    .card:hover {{
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }}
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -116,7 +130,7 @@
   </nav>
   <header class="hero">
     <h1>Protege tu negocio con seguridad en la nube</h1>
-    <p>Consultoría especializada en Microsoft Defender XDR, Intune y Purview para pequeñas y medianas empresas.</p>
+    <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas.</p>
     <a href="mailto:info@triforsecsolutions.com" class="cta-button">Contáctanos</a>
   </header>
   <section class="services">
