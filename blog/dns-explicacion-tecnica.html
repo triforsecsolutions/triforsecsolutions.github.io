@@ -1,124 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Qué es el DNS y cómo funciona? | TriforSec Solutions</title>
-  <meta name="description" content="Conoce qué es el DNS, su funcionamiento en redes internas y externas, y cómo puede impactar en la seguridad de tu empresa con TriforSec Solutions.">
-  <meta name="keywords" content="DNS, Sistema de Nombres de Dominio, redes, seguridad en redes, Microsoft 365, ciberseguridad, TriforSec Solutions">
-  <meta name="author" content="TriforSec Solutions">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Conoce qué es el DNS, su funcionamiento en redes internas y externas, y cómo puede impactar en la seguridad de tu empresa con TriforSec Solutions." />
+  <meta name="keywords" content="DNS, Sistema de Nombres de Dominio, redes, seguridad en redes, Microsoft 365, ciberseguridad, TriforSec Solutions" />
+  <meta name="author" content="TriforSec Solutions" />
+  <meta name="robots" content="index, follow" />
 
   <meta property="og:title" content="¿Qué es el DNS y cómo funciona? | TriforSec Solutions" />
   <meta property="og:description" content="Exploramos cómo funciona el DNS y su importancia para la seguridad empresarial. Aprende más con TriforSec Solutions." />
   <meta property="og:image" content="https://triforsecsolutions.com/blog/dns-thumbnail.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/blog/dns-explicacion-tecnica.html" />
   <meta property="og:type" content="article" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="¿Qué es el DNS y cómo funciona? | TriforSec Solutions" />
   <meta name="twitter:description" content="Conoce qué es el DNS, cómo funciona y por qué es clave para tu seguridad empresarial." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/blog/dns-thumbnail.jpg" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6U1+XQ0eXJp+Z1K+2cQj5ZP7lFZxLtY2NxHh+7Kk+G5ZpfkRQlEXAMPLE" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
+    :root {
+      --primary-color: #0078d4;
+      --dark-color: #003366;
+      --light-bg: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-color: #1a1a1a;
+      --radius: 8px;
+      --transition: 0.3s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #f4f6f9;
-      color: #1a1a1a;
-      margin: 0;
-      padding: 2rem;
+      background: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
     }
     header {
-      max-width: 800px;
-      margin: auto;
+      position: relative;
       text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: url('https://triforsecsolutions.com/website_assets/dns-hero.jpg') center/cover no-repeat;
+      color: #fff;
     }
-    header img {
-      max-width: 100%;
-      border-radius: 12px;
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    h1 {
-      color: #003366;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    header p {
+      font-size: 1.125rem;
     }
-    article {
+
+    main {
       max-width: 800px;
       margin: 2rem auto;
-      background: #fff;
+      padding: 0 1rem;
+    }
+    article {
+      background: var(--card-bg);
       padding: 2rem;
-      border-radius: 12px;
+      border-radius: var(--radius);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     }
-    h2 {
-      color: #003366;
+    article h2 {
+      color: var(--dark-color);
       margin-top: 2rem;
+      font-size: 1.5rem;
     }
-    p {
+    article p {
       margin: 1rem 0;
     }
-    em {
-      color: #333;
+    article strong {
+      color: var(--primary-color);
     }
+
     .footer-actions {
       text-align: center;
-      margin-top: 2rem;
+      margin: 2rem 0;
     }
     .btn {
-      display: inline-block;
-      background: #0078d4;
+      display: inline-flex;
+      align-items: center;
+      background: var(--primary-color);
       color: #fff;
       padding: 0.75rem 1.5rem;
       margin: 0.5rem;
-      border-radius: 8px;
+      border-radius: var(--radius);
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .btn i {
+      margin-left: 0.5rem;
     }
     .btn:hover {
-      background: #005fa3;
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     footer {
       text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #777;
+      margin: 2rem 1rem;
+      font-size: 0.875rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="/website_assets/dns-ilustracion.png" alt="Ilustración sobre DNS" />
-    <h1>¿Qué es el DNS y para qué sirve?</h1>
+    <div class="hero-content">
+      <h1>¿Qué es el DNS y para qué sirve?</h1>
+      <p>Aprende el rol fundamental del DNS en internet y redes internas, y cómo protege tu infraestructura.</p>
+    </div>
   </header>
 
-  <article>
-    <p>El DNS (Domain Name System) es un sistema esencial en el mundo digital. Su función principal es traducir los nombres de dominio legibles por humanos (como <strong>triforsecsolutions.com</strong>) en direcciones IP entendibles por los sistemas de red.</p>
+  <main>
+    <article>
+      <p>El <strong>DNS</strong> (<em>Domain Name System</em>) es un sistema esencial que traduce nombres de dominio legibles (como <strong>triforsecsolutions.com</strong>) en direcciones IP que usan los equipos para comunicarse.</p>
 
-    <h2>DNS Externo</h2>
-    <p>El DNS externo es el encargado de resolver nombres de dominio en internet. Por ejemplo, cuando escribes una URL en tu navegador, tu dispositivo consulta servidores DNS externos para localizar la dirección IP del servidor donde se aloja ese sitio web.</p>
+      <h2>DNS Externo</h2>
+      <p>El DNS externo resuelve nombres a nivel global. Cuando accedes a un sitio web, tu dispositivo consulta servidores DNS públicos para encontrar la IP del servidor que aloja ese sitio.</p>
 
-    <h2>DNS Interno</h2>
-    <p>Dentro de las organizaciones, el DNS interno permite que los dispositivos dentro de la red local se encuentren entre sí por nombre, sin necesidad de recordar direcciones IP. Este tipo de resolución es crucial para servicios como autenticación, carpetas compartidas, servidores de correo y más.</p>
+      <h2>DNS Interno</h2>
+      <p>En entornos corporativos, el DNS interno conecta dispositivos de la red local por nombre, facilitando servicios como autenticación, compartición de archivos y correo.</p>
 
-    <h2>¿Por qué es importante para la seguridad?</h2>
-    <p>Una mala configuración de DNS puede representar una puerta de entrada para ataques como phishing, envenenamiento de caché DNS o redirección maliciosa. Es vital tener una arquitectura DNS robusta, monitoreo activo y soluciones de seguridad como Microsoft Defender for Endpoint o XDR que validen la integridad de estas peticiones.</p>
+      <h2>Importancia en la seguridad</h2>
+      <p>Configuraciones incorrectas pueden llevar a ataques de phishing, envenenamiento de caché o secuestro de dominios. Implementar filtros, monitoreo y soluciones como <strong>Microsoft Defender XDR</strong> ayuda a validar peticiones DNS y proteger tu red.</p>
 
-    <h2>¿Cómo puede ayudarte TriforSec Solutions?</h2>
-    <p>Si tu empresa necesita ayuda para configurar, auditar o proteger su infraestructura DNS, interna o externa, podemos ayudarte a implementar buenas prácticas y soluciones modernas de seguridad.</p>
+      <h2>¿Cómo te ayuda TriforSec Solutions?</h2>
+      <p>Ofrecemos auditorías, diseño e implementación de arquitecturas DNS seguras, tanto internas como externas, garantizando disponibilidad y resiliencia ante amenazas.</p>
 
-    <div class="footer-actions">
-      <a class="btn" href="/">Volver al inicio</a>
-      <a class="btn" href="mailto:info@triforsecsolutions.com">Contáctanos</a>
-    </div>
-  </article>
+      <div class="footer-actions">
+        <a href="/" class="btn">Volver al inicio <i class="fas fa-home"></i></a>
+        <a href="mailto:info@triforsecsolutions.com" class="btn">Contáctanos <i class="fas fa-envelope"></i></a>
+      </div>
+    </article>
+  </main>
 
   <footer>
-    © 2025 TriforSec Solutions - Todos los derechos reservados
+    &copy; 2025 TriforSec Solutions. Todos los derechos reservados.
   </footer>
 </body>
 </html>
