@@ -1,114 +1,217 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TriforSec Solutions</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f5f7fa;
-            color: #1a1a1a;
-        }
-        header {
-            padding: 1.5rem;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #003366;
-        }
-        .hero {
-            text-align: center;
-            color: white;
-            background-image: url('website_assets/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 6rem 1rem;
-            text-shadow: 1px 1px 4px black;
-        }
-        .hero h1 {
-            font-size: 2rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-        }
-        .btn {
-            background: #0070f3;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-        .services {
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-        .card {
-            background: #f0f4f8;
-            border-radius: 1rem;
-            padding: 2rem;
-            width: 280px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card img {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 1rem;
-        }
-        .card h3 {
-            margin: 0.5rem 0;
-            color: #002b5e;
-        }
-        .card p {
-            font-size: 0.95rem;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriforSec Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f9;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      color: #003366;
+    }
+
+    header.hero {
+      position: relative;
+      background: url('website_assets/hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    header.hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    header.hero * {
+      position: relative;
+    }
+    header.hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #0078d4;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #005ea6;
+    }
+
+    .services {
+      background: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .card {
+      background: #f0f4f8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .card svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+      color: #0078d4;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #003366;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .contact-section {
+      background: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+    .contact-section form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-section button {
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-section button:hover {
+      background: #005ea6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f4f6f9;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>TriforSec Solutions</header>
+  <nav><h1>TriforSec Solutions</h1></nav>
+  <header class="hero">
+    <h1>Protege tu negocio con seguridad en la nube</h1>
+    <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas.</p>
+    <a href="#formulario" class="cta-button">Contáctanos</a>
+  </header>
 
-    <section class="hero">
-        <h1>Protege tu negocio con seguridad en la nube</h1>
-        <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview<br>para pequeñas y medianas empresas.</p>
-        <a href="#formulario" class="btn">Contáctanos</a>
-    </section>
+  <section class="services">
+    <h2>Servicios principales</h2>
+    <div class="cards">
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+        </svg>
+        <h3>Microsoft Defender XDR</h3>
+        <p>Defiende tu entorno contra amenazas avanzadas con detección y respuesta extendida.</p>
+      </div>
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8h8v8H8V8z"/>
+        </svg>
+        <h3>Microsoft Purview</h3>
+        <p>Protege y gestiona la información sensible cumpliendo con normativas clave.</p>
+      </div>
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <rect x="7" y="2" width="10" height="20" rx="2" ry="2"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18h2"/>
+        </svg>
+        <h3>Microsoft Intune</h3>
+        <p>Administra dispositivos, apps y accesos de forma centralizada y segura desde la nube.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="services">
-        <h2>Servicios principales</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="website_assets/defender.png" alt="Defender Icon" />
-                <h3>Microsoft Defender XDR</h3>
-                <p>Defiende tu entorno contra amenazas avanzadas con detección y respuesta extendida.</p>
-            </div>
-            <div class="card">
-                <img src="website_assets/purview.png" alt="Purview Icon" />
-                <h3>Microsoft Purview</h3>
-                <p>Protege y gestiona la información sensible cumpliendo con normativas clave.</p>
-            </div>
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/4335/4335949.png" alt="Intune Icon" />
-                <h3>Microsoft Intune</h3>
-                <p>Administra dispositivos, apps y accesos de forma centralizada y segura desde la nube.</p>
-            </div>
-        </div>
-    </section>
+  <section class="contact-section" id="formulario">
+    <h2>Contáctanos</h2>
+    <form action="https://formspree.io/f/mrbkagdn" method="POST">
+      <input type="text" name="Nombre" placeholder="Tu nombre" required>
+      <input type="email" name="Email" placeholder="Tu correo electrónico" required>
+      <textarea name="Mensaje" rows="5" placeholder="¿En qué podemos ayudarte? (opcional)"></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>© 2025 TriforSec Solutions. Todos los derechos reservados.</footer>
 </body>
 </html>
