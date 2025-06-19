@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TriforSec Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/lucide@latest" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom right, #f4f6f9, #dfe7ee);
+            background: linear-gradient(to bottom right, #f5f8fc, #dbe6ef);
             color: #1a1a1a;
+            scroll-behavior: smooth;
         }
         header {
             text-align: center;
             padding: 3rem 1rem 1rem;
+            animation: fadeIn 1s ease;
         }
         header img {
             max-width: 180px;
@@ -24,16 +27,16 @@
         .hero {
             text-align: center;
             padding: 1rem 2rem;
+            animation: fadeInUp 1s ease;
         }
         .hero h1 {
             font-size: 2rem;
             font-weight: 800;
-            margin: 1rem 0 0.5rem;
         }
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto 1rem;
+            margin: 0 auto;
         }
         .cta-button {
             background-color: #003366;
@@ -44,47 +47,62 @@
             border-radius: 6px;
             text-decoration: none;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             transition: background-color 0.3s ease;
         }
         .cta-button:hover {
             background-color: #0052a3;
         }
-        .services {
+        .services, .benefits {
             text-align: center;
             padding: 2rem 1rem;
             background: white;
+            animation: fadeInUp 1s ease;
         }
-        .services h2 {
+        h2 {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 1rem;
         }
-        .service-list {
+        .card-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
-        .service {
+        .card {
             background: #f0f4f8;
             padding: 1rem;
             border-radius: 8px;
-            max-width: 300px;
+            max-width: 280px;
             text-align: left;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
-        .service h3 {
-            margin-top: 0;
+        .card h3 {
             font-size: 1.1rem;
             color: #003366;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
         }
         footer {
             text-align: center;
             padding: 1rem;
             font-size: 0.9rem;
             color: #555;
+            background: #f5f8fc;
+        }
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
     </style>
 </head>
@@ -99,18 +117,35 @@
     </section>
     <section class="services">
         <h2>¿Qué ofrecemos?</h2>
-        <div class="service-list">
-            <div class="service">
+        <div class="card-list">
+            <div class="card">
                 <h3>🛡️ Protección avanzada</h3>
-                <p>Implementación de Microsoft Defender XDR para detectar y responder a amenazas.</p>
+                <p>Implementación de Microsoft Defender XDR para detectar y responder a amenazas de forma proactiva.</p>
             </div>
-            <div class="service">
-                <h3>📊 Gobierno y cumplimiento</h3>
-                <p>Soluciones con Microsoft Purview para controlar y proteger la información sensible.</p>
+            <div class="card">
+                <h3>🗂️ Gobierno y cumplimiento</h3>
+                <p>Control y protección de datos sensibles con Microsoft Purview y políticas DLP.</p>
             </div>
-            <div class="service">
+            <div class="card">
                 <h3>📱 Administración moderna</h3>
-                <p>Gestión de dispositivos y aplicaciones con Microsoft Intune.</p>
+                <p>Gestión segura de dispositivos móviles, laptops y apps con Microsoft Intune.</p>
+            </div>
+        </div>
+    </section>
+    <section class="benefits">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="card-list">
+            <div class="card">
+                <h3>✅ Especialistas en Microsoft</h3>
+                <p>Conocimiento profundo en Microsoft 365, Defender, Intune y Purview para PYMEs.</p>
+            </div>
+            <div class="card">
+                <h3>✅ Enfoque personalizado</h3>
+                <p>Soluciones adaptadas a las necesidades de empresas sin área de TI interna.</p>
+            </div>
+            <div class="card">
+                <h3>✅ Seguridad confiable</h3>
+                <p>Protección basada en prácticas recomendadas y cumplimiento de estándares.</p>
             </div>
         </div>
     </section>
