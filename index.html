@@ -5,174 +5,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TriforSec Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fbfc;
-      color: #111827;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
     }
-
     header {
-      background: #ffffff;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: #0f3762;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 8rem 2rem;
-      background: url('https://images.unsplash.com/photo-1629904853696-f0bc54eea481?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      color: white;
-      transition: background 0.3s ease-in-out;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
+      padding: 1rem 2rem;
+      background: #fff;
       font-weight: bold;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-
-    .hero p {
+      color: #003566;
       font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      border-bottom: 1px solid #e0e0e0;
     }
-
-    .btn {
-      background: #0366d6;
+    .hero {
+      background: url('./assets/hero-bg.jpg') no-repeat center center/cover;
+      padding: 6rem 2rem;
       color: white;
-      padding: 0.75rem 1.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .btn {
+      background: #0073e6;
+      color: white;
+      padding: 0.8rem 1.5rem;
       border: none;
-      font-size: 1rem;
-      border-radius: 6px;
+      border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.2s ease;
     }
-
-    .btn:hover {
-      background: #024ea2;
-    }
-
     .services {
       padding: 4rem 2rem;
       text-align: center;
     }
-
-    .services h3 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .card-grid {
+    .cards {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
-
     .card {
-      background: #f1f5f9;
+      background: #f0f4f8;
       border-radius: 10px;
       padding: 2rem;
       width: 300px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0,0,0,0.1);
     }
-
     .card img {
-      width: 40px;
+      height: 40px;
       margin-bottom: 1rem;
     }
-
-    form {
-      background: #ffffff;
-      max-width: 500px;
-      margin: 4rem auto;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
     footer {
-      background: #f9fafb;
       text-align: center;
       padding: 1.5rem;
-      font-size: 0.875rem;
-      color: #6b7280;
+      font-size: 0.9rem;
+      background: #f0f0f0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>TriforSec Solutions</h1>
-  </header>
-
+  <header>TriforSec Solutions</header>
   <section class="hero">
-    <h2>Protege tu negocio con seguridad en la nube</h2>
-    <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas.</p>
-    <a href="#formulario"><button class="btn">Contáctanos</button></a>
+    <h1>Protege tu negocio con seguridad en la nube</h1>
+    <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview<br>para pequeñas y medianas empresas.</p>
+    <a href="#contact"><button class="btn">Contáctanos</button></a>
   </section>
 
   <section class="services">
-    <h3>Servicios principales</h3>
-    <div class="card-grid">
+    <h2>Servicios principales</h2>
+    <div class="cards">
       <div class="card">
-        <img src="https://img.icons8.com/color/48/defender.png" alt="Defender Icon"/>
-        <h4>Microsoft Defender XDR</h4>
+        <img src="./assets/icon-defender.png" alt="Defender Icon"/>
+        <h3>Microsoft Defender XDR</h3>
         <p>Defiende tu entorno contra amenazas avanzadas con detección y respuesta extendida.</p>
       </div>
       <div class="card">
-        <img src="https://img.icons8.com/color/48/database.png" alt="Purview Icon"/>
-        <h4>Microsoft Purview</h4>
+        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471343.png" height="40"/>
+        <h3>Microsoft Purview</h3>
         <p>Protege y gestiona la información sensible cumpliendo con normativas clave.</p>
       </div>
       <div class="card">
-        <img src="https://img.icons8.com/color/48/device-manager.png" alt="Intune Icon"/>
-        <h4>Microsoft Intune</h4>
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" height="40"/>
+        <h3>Microsoft Intune</h3>
         <p>Administra dispositivos, apps y accesos de forma centralizada y segura desde la nube.</p>
       </div>
     </div>
   </section>
 
-  <form id="formulario" action="https://formspree.io/f/mrbkagdn" method="POST">
-    <h3 style="text-align:center; margin-bottom: 1rem;">Solicita una asesoría personalizada</h3>
-    <input type="text" name="name" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo electrónico" required>
-    <textarea name="message" rows="4" placeholder="Cuéntanos qué necesitas (opcional)"></textarea>
-    <button type="submit" class="btn" style="width:100%;">Enviar</button>
-  </form>
-
-  <footer>
-    © 2025 TriforSec Solutions. Todos los derechos reservados.
-  </footer>
+  <footer>© 2025 TriforSec Solutions. Todos los derechos reservados.</footer>
 </body>
 </html>
