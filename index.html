@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -119,6 +120,44 @@
       font-size: 0.95rem;
       color: #333;
     }
+    .contact-section {
+      background: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+    .contact-section form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-section button {
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-section button:hover {
+      background: #005ea6;
+    }
     footer {
       text-align: center;
       padding: 1rem;
@@ -143,8 +182,6 @@
   <section class="services">
     <h2>Servicios principales</h2>
     <div class="cards">
-
-      <!-- Defender XDR -->
       <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -153,8 +190,6 @@
         <h3>Microsoft Defender XDR</h3>
         <p>Defiende tu entorno contra amenazas avanzadas con detección y respuesta extendida.</p>
       </div>
-
-      <!-- Purview -->
       <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z"/>
@@ -163,8 +198,6 @@
         <h3>Microsoft Purview</h3>
         <p>Protege y gestiona la información sensible cumpliendo con normativas clave.</p>
       </div>
-
-      <!-- Intune -->
       <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <rect x="7" y="2" width="10" height="20" rx="2" ry="2"/>
@@ -173,8 +206,6 @@
         <h3>Microsoft Intune</h3>
         <p>Administra dispositivos, apps y accesos de forma centralizada y segura desde la nube.</p>
       </div>
-
-      <!-- Defender for Identity -->
       <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -182,8 +213,17 @@
         <h3>Microsoft Defender for Identity</h3>
         <p>Detecta amenazas en entornos híbridos a través de señales del Active Directory local.</p>
       </div>
-
     </div>
+  </section>
+
+  <section class="contact-section" id="formulario">
+    <h2>Contáctanos</h2>
+    <form action="https://formspree.io/f/mrbkagdn" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte? (opcional)"></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
   </section>
 
   <footer>
