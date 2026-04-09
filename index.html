@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TriforSec Solutions</title>
-  <!-- Meta SEO/Social mantienen igual -->
-  <link rel="icon" href="favicon.ico" />
+  <title>Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions</title>
+  <meta name="description" content="Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas. Protege correo, identidades, dispositivos y datos sensibles." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="TriforSec Solutions" />
+  <link rel="canonical" href="https://triforsecsolutions.com/" />
+  <meta property="og:title" content="Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions" />
+  <meta property="og:description" content="Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas." />
+  <meta property="og:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
+  <meta property="og:url" content="https://triforsecsolutions.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions" />
+  <meta name="twitter:description" content="Protege correo, identidades, dispositivos y datos sensibles con consultoría especializada en Microsoft 365." />
+  <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TriforSec Solutions",
+    "url": "https://triforsecsolutions.com/",
+    "email": "info@triforsecsolutions.com",
+    "description": "Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas.",
+    "areaServed": "MX"
+  }
+  </script>
   <style>
     :root {
       --clr-primary: #0078d4;
@@ -30,6 +55,20 @@
       color: var(--clr-text);
       background: var(--clr-bg);
       scroll-behavior: smooth;
+    }
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -40px;
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      z-index: 2000;
+      border-radius: 0 0 6px 6px;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 0;
     }
     nav {
       position: sticky; top: 0; width: 100%;
@@ -105,6 +144,71 @@
       padding: calc(var(--spacer)*4) var(--spacer);
       text-align: center;
     }
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      color: #334;
+    }
+    .trust-strip,
+    .why-us,
+    .process,
+    .cta-section {
+      padding: calc(var(--spacer)*4) var(--spacer);
+    }
+    .trust-strip {
+      background: #eef5fb;
+      text-align: center;
+    }
+    .trust-strip ul,
+    .process ol {
+      max-width: 1000px;
+      margin: 1.5rem auto 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .trust-strip li,
+    .process li {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .why-us {
+      background: var(--clr-card);
+    }
+    .why-us-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .why-us-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .why-us-card h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+    .process {
+      background: var(--clr-bg);
+      text-align: center;
+    }
+    .cta-section {
+      background: linear-gradient(135deg, #003366, #0078d4);
+      color: #fff;
+      text-align: center;
+    }
+    .cta-section p {
+      max-width: 720px;
+      margin: 1rem auto 1.5rem;
+    }
     .services h2 {
       font-size: 2rem;
       color: #003366;
@@ -161,6 +265,13 @@
       margin: 0 auto;
       display: grid;
       gap: var(--spacer);
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #003366;
     }
     .contact-section input,
     .contact-section textarea {
@@ -218,21 +329,39 @@
   </style>
 </head>
 <body>
-  <nav id="navbar">
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+  <nav id="navbar" aria-label="Principal">
     <h1>TriforSec Solutions</h1>
     <img src="favicon.ico" alt="Logo TriforSec" />
   </nav>
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Protege tu negocio con seguridad en la nube</h1>
-      <p>Consultoría especializada en Microsoft 365, Defender XDR, Intune y Purview para pequeñas y medianas empresas.</p>
-      <a href="#formulario" class="cta-button">Contáctanos</a>
+      <h1>Protege Microsoft 365 antes de que un incidente te obligue a reaccionar</h1>
+      <p>Ayudamos a pequeñas y medianas empresas a fortalecer correo, identidades, dispositivos y datos sensibles con una estrategia práctica sobre Microsoft 365, Defender, Intune y Purview.</p>
+      <a href="#formulario" class="cta-button">Solicita un diagnóstico inicial</a>
     </div>
   </header>
 
-  <section class="services">
-    <h2>Servicios principales</h2>
+  <main id="contenido-principal">
+  <section class="trust-strip" aria-labelledby="confianza-operativa">
+    <h2 id="confianza-operativa">En qué te ayudamos</h2>
+    <div class="section-intro">
+      <p>Nos enfocamos en reducir riesgo real, cerrar brechas comunes de configuración y ayudarte a tomar decisiones más seguras sin complicar la operación del negocio.</p>
+    </div>
+    <ul>
+      <li>Diagnóstico inicial de seguridad en Microsoft 365</li>
+      <li>Protección de correo, identidades y endpoints</li>
+      <li>Gobierno básico de datos sensibles y cumplimiento</li>
+      <li>Recomendaciones prácticas, sin humo ni sobreingeniería</li>
+    </ul>
+  </section>
+
+  <section class="services" aria-labelledby="servicios-principales">
+    <h2 id="servicios-principales">Servicios principales</h2>
+    <div class="section-intro">
+      <p>Servicios orientados a entornos empresariales que necesitan mejorar seguridad, visibilidad y control sin montar una estructura interna compleja.</p>
+    </div>
     <div class="cards">
       <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
@@ -259,6 +388,12 @@
       </div>
 
       <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h2m16 0h2M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <h3>Evaluación de postura de seguridad</h3>
+        <p>Revisión inicial para identificar brechas comunes, riesgos prioritarios y acciones de mejora realistas.</p>
+      </div>
+
+      <div class="card">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <h3>Blog de Seguridad</h3>
         <p>Guías y artículos para proteger tu empresa.</p>
@@ -267,15 +402,65 @@
     </div>
   </section>
 
-  <section class="contact-section" id="formulario">
-    <h2>Contáctanos</h2>
+  <section class="why-us" aria-labelledby="por-que-triforsec">
+    <h2 id="por-que-triforsec" style="text-align:center; color:#003366; margin-top:0;">Por qué trabajar con TriforSec Solutions</h2>
+    <div class="section-intro">
+      <p>La prioridad no es venderte herramientas por vender, sino ayudarte a reducir exposición y ordenar tu entorno de seguridad con criterio técnico y sentido operativo.</p>
+    </div>
+    <div class="why-us-grid">
+      <div class="why-us-card">
+        <h3>Enfoque práctico</h3>
+        <p>Traducimos capacidades complejas de Microsoft en decisiones implementables para tu negocio.</p>
+      </div>
+      <div class="why-us-card">
+        <h3>Orientado a riesgo</h3>
+        <p>Priorizamos lo que más reduce superficie de ataque y mejora la protección real del entorno.</p>
+      </div>
+      <div class="why-us-card">
+        <h3>Sin complejidad innecesaria</h3>
+        <p>Evitamos sobrecargar a tu empresa con controles costosos o difíciles de operar cuando no aportan valor inmediato.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" aria-labelledby="como-trabajamos">
+    <h2 id="como-trabajamos" style="color:#003366; margin-top:0;">Cómo trabajamos</h2>
+    <div class="section-intro">
+      <p>Un proceso simple para pasar de visibilidad limitada a una hoja de ruta clara de seguridad.</p>
+    </div>
+    <ol>
+      <li><strong>1. Diagnóstico</strong><br>Entendemos tu entorno actual y los riesgos más urgentes.</li>
+      <li><strong>2. Priorización</strong><br>Definimos qué corregir primero según impacto y esfuerzo.</li>
+      <li><strong>3. Implementación</strong><br>Aplicamos mejoras seguras y realistas sobre Microsoft 365.</li>
+      <li><strong>4. Continuidad</strong><br>Dejamos recomendaciones claras para mantener el avance.</li>
+    </ol>
+  </section>
+
+  <section class="cta-section" aria-labelledby="cta-principal-final">
+    <h2 id="cta-principal-final">Da el siguiente paso con una revisión inicial</h2>
+    <p>Si sospechas que tu entorno Microsoft 365 puede estar expuesto, desordenado o infrautilizado en seguridad, podemos ayudarte a entender por dónde empezar y qué corregir primero.</p>
+    <a href="#formulario" class="cta-button" style="background:#fff; color:#003366;">Quiero una evaluación inicial</a>
+  </section>
+
+  <section class="contact-section" id="formulario" aria-labelledby="titulo-contacto">
+    <h2 id="titulo-contacto">Contáctanos</h2>
     <form action="https://formspree.io/f/mrbkagdn" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte? (opcional)"></textarea>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" name="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte? (opcional)"></textarea>
+      </div>
       <button type="submit">Enviar mensaje</button>
     </form>
   </section>
+  </main>
 
   <footer>
     © 2025 TriforSec Solutions. Todos los derechos reservados. info@triforsecsolutions.com

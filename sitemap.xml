@@ -6,4 +6,22 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://triforsecsolutions.com/blog/</loc>
+    <lastmod>2025-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://triforsecsolutions.com/blog/dns-explicacion-tecnica.html</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://triforsecsolutions.com/blog/seguridad-microsoft-365-pymes.html</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
