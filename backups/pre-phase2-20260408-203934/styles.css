@@ -1,0 +1,143 @@
+:root {
+  --site-primary: #0078d4;
+  --site-primary-dark: #005ea6;
+  --site-dark: #003366;
+  --site-bg: #f4f6f9;
+  --site-card: #ffffff;
+  --site-card-soft: #f8fbff;
+  --site-text: #1a1a1a;
+  --site-text-soft: #526174;
+  --site-border: #dbe6f1;
+  --site-radius: 14px;
+  --site-transition: 0.3s ease;
+  --site-shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
+  --site-shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--site-bg);
+  color: var(--site-text);
+  line-height: 1.6;
+}
+
+.site-article-header {
+  position: relative;
+  text-align: center;
+  padding: 5.5rem 1rem 3rem;
+  color: #fff;
+}
+
+.site-article-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.72));
+  z-index: 0;
+}
+
+.site-article-hero {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.site-article-header h1 {
+  font-size: clamp(2rem, 1.6rem + 2vw, 3.1rem);
+  margin-bottom: 1rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.site-article-header p {
+  font-size: clamp(1rem, 0.96rem + 0.4vw, 1.18rem);
+  color: rgba(255,255,255,0.92);
+}
+
+.site-article-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.site-article-card {
+  background: linear-gradient(180deg, #ffffff, var(--site-card-soft));
+  padding: 2rem;
+  border-radius: var(--site-radius);
+  border: 1px solid var(--site-border);
+  box-shadow: var(--site-shadow-sm);
+}
+
+.site-article-card h2 {
+  color: var(--site-dark);
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.site-article-card p,
+.site-article-card ul {
+  margin: 1rem 0;
+  color: var(--site-text-soft);
+}
+
+.site-article-card strong {
+  color: var(--site-primary);
+}
+
+.site-footer-actions {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.site-pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--site-primary);
+  color: #fff;
+  padding: 0.85rem 1.45rem;
+  margin: 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 120, 212, 0.22);
+  transition: transform var(--site-transition), box-shadow var(--site-transition), background var(--site-transition);
+}
+
+.site-pill-button:hover,
+.site-pill-button:focus-visible {
+  background: var(--site-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+.site-footer {
+  text-align: center;
+  margin: 2rem 1rem;
+  font-size: 0.875rem;
+  color: #666;
+  border-top: 1px solid var(--site-border);
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .site-article-header {
+    padding: 4.5rem 1rem 2.5rem;
+  }
+
+  .site-article-card {
+    padding: 1.4rem;
+  }
+
+  .site-pill-button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
