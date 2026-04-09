@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seguridad en Microsoft 365 para PYMES | TriforSec Solutions</title>
   <meta name="description" content="TriforSec Solutions ayuda a las PYMES a implementar soluciones de seguridad en Microsoft 365 con Defender XDR, Intune, Purview y más." />
+  <meta name="author" content="TriforSec Solutions" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://triforsecsolutions.com/blog/seguridad-microsoft-365-pymes.html" />
 
@@ -78,20 +79,31 @@
     article h2 { color:var(--dark); margin-top:2rem; font-size:1.5rem; }
     article p, article ul { margin:1rem 0; color:var(--text-soft); }
     article ul { list-style: none; padding-left:0; }
-    article li { margin:0.75rem 0; padding-left:1.5rem; position:relative; }
-    article li::before { content:'\f058'; font-family:'Font Awesome 6 Free'; font-weight:900;
-      position:absolute; left:0; color:var(--primary);
+    article li { margin:0.75rem 0; padding-left:1.6rem; position:relative; }
+    article li::before {
+      content:'✓';
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--primary);
+      font-weight:800;
     }
     article strong { color:var(--primary); }
 
     .footer-actions { text-align:center; margin:2rem 0; }
-    .btn { display:inline-flex; align-items:center; background:var(--primary); color:#fff;
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--primary); color:#fff;
       padding:0.85rem 1.45rem; margin:0.5rem; border-radius:999px;
       font-weight:700; text-decoration:none; box-shadow:0 12px 30px rgba(0, 120, 212, 0.22); transition:transform var(--trans), box-shadow var(--trans), background var(--trans);
     }
-    .btn:hover { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,0.12); }
+    .btn:hover, .btn:focus-visible { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,0.12); }
 
-    footer { text-align:center; margin:2rem 1rem; font-size:0.875rem; color:#666; }
+    footer { text-align:center; margin:2rem 1rem; font-size:0.875rem; color:#666; border-top:1px solid var(--border); padding-top:1.5rem; }
+
+    @media (max-width: 640px) {
+      header { padding: 4.5rem 1rem 2.5rem; }
+      article { padding: 1.4rem; }
+      .btn { width: 100%; margin: 0.5rem 0; }
+    }
   </style>
 </head>
 <body>
