@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Detecta las brechas más urgentes en tu entorno Microsoft 365 y recibe una hoja de ruta clara." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/service-pages.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,28 +40,7 @@
   }
   </script>
   <style>
-    :root {
-      --primary: #0078d4;
-      --primary-dark: #005ea6;
-      --dark: #003366;
-      --bg: #f4f6f9;
-      --card: #ffffff;
-      --card-soft: #f8fbff;
-      --text: #1a1a1a;
-      --text-soft: #4d5e73;
-      --border: #dbe6f1;
-      --shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
-      --shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
-      --radius: 14px;
-      --transition: 0.3s ease;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
     .skip-link {
       position: absolute;
       left: 1rem;
@@ -77,63 +57,13 @@
     .skip-link:focus-visible {
       transform: translateY(0);
     }
-    header.topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.8);
-      backdrop-filter: saturate(180%) blur(14px);
-      box-shadow: 0 6px 20px rgba(5, 31, 61, 0.06);
-    }
-    .topbar-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    .brand {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      font-size: clamp(1.2rem, 1rem + 1vw, 1.65rem);
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      margin-left: 1.25rem;
-    }
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--primary);
-    }
-    .hero {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      background:
+    .service-hero {
+      background-image:
         radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('website_assets/hero.jpg') center/cover no-repeat;
-      padding: 6.5rem 1rem 5.5rem;
-      overflow: hidden;
+        url('website_assets/hero.jpg');
+      padding-bottom: 5.5rem;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.75));
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .eyebrow {
+    .service-eyebrow {
       display: inline-block;
       margin-bottom: 1rem;
       padding: 0.4rem 0.85rem;
@@ -143,56 +73,14 @@
       font-weight: 700;
       background: rgba(255,255,255,0.08);
     }
-    .hero h1 {
-      font-size: clamp(2.2rem, 1.7rem + 2vw, 3.7rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 1.5rem;
-      color: rgba(255,255,255,0.92);
-      font-size: clamp(1.02rem, 1rem + 0.45vw, 1.22rem);
-    }
-    .hero-actions {
+    .service-hero-actions {
       display: flex;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 1.5rem;
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.9rem 1.5rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(0, 120, 212, 0.24);
-    }
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-    .btn-secondary {
-      background: #fff;
-      color: var(--dark);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-    .btn-secondary:hover,
-    .btn-secondary:focus-visible {
-      background: #eef5fb;
-      transform: translateY(-2px);
-    }
-    .hero-points {
+    .service-hero-points {
       list-style: none;
       display: grid;
       gap: 0.75rem;
@@ -201,181 +89,57 @@
       margin: 2rem auto 0;
       padding: 0;
     }
-    .hero-points li {
+    .service-hero-points li {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 14px;
       padding: 1rem;
       backdrop-filter: blur(8px);
     }
-    section {
-      padding: 4.5rem 1rem;
-    }
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .section-title {
-      text-align: center;
-      color: var(--dark);
-      margin-bottom: 0.75rem;
-      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-    .section-intro {
-      max-width: 760px;
-      margin: 0 auto 2rem;
-      text-align: center;
-      color: var(--text-soft);
-    }
-    .grid-3,
-    .grid-4 {
+    .service-grid-3,
+    .service-grid-4 {
       display: grid;
       gap: 1.5rem;
     }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .card {
-      background: linear-gradient(180deg, #ffffff, var(--card-soft));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      padding: 1.5rem;
-    }
-    .card h3 {
-      color: var(--dark);
-      margin-bottom: 0.75rem;
-      font-size: 1.15rem;
-    }
-    .card p,
-    .card li {
-      color: var(--text-soft);
-    }
-    .steps ol,
-    .checklist ul {
+    .service-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .service-grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .service-checklist ul,
+    .service-steps ol {
       list-style: none;
       padding: 0;
       margin: 0;
       display: grid;
       gap: 1rem;
     }
-    .steps li,
-    .checklist li {
+    .service-checklist li,
+    .service-steps li {
       background: #fff;
-      border: 1px solid var(--border);
+      border: 1px solid var(--service-border);
       border-radius: 12px;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--service-shadow-sm);
       padding: 1rem 1.1rem;
+      color: var(--service-text-soft);
     }
-    .steps li strong,
-    .checklist li strong {
-      color: var(--dark);
+    .service-checklist li strong,
+    .service-steps li strong {
+      color: var(--service-dark);
     }
-    .assessment-focus {
+    .service-focus-band {
       background: #eef5fb;
     }
-    .cta-band {
-      background: linear-gradient(135deg, #003366, #0078d4);
-      color: #fff;
-      text-align: center;
-    }
-    .cta-band .section-title,
-    .cta-band .section-intro {
-      color: #fff;
-    }
-    .cta-band .section-intro {
-      color: rgba(255,255,255,0.9);
-    }
-    .contact-panel {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      border-radius: 16px;
-      padding: 1.5rem;
-    }
-    .contact-panel p {
-      color: var(--text-soft);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    form {
-      display: grid;
-      gap: 1rem;
-      text-align: left;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.45rem;
-      font-weight: 600;
-      color: var(--dark);
-    }
-    input,
-    textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #c8d8e8;
-      border-radius: 10px;
-      font-size: 1rem;
-      background: #fbfdff;
-    }
-    input:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(0, 120, 212, 0.14);
-      background: #fff;
-    }
-    button {
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.875rem;
-      color: #666;
-    }
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
-      margin: 0 0.4rem;
-    }
-    footer a:hover,
-    footer a:focus-visible {
-      text-decoration: underline;
-    }
     @media (max-width: 700px) {
-      .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links a {
-        margin-left: 0;
-        margin-right: 1rem;
-      }
-      .hero {
+      .service-hero {
         padding: 5.5rem 1rem 4.5rem;
-      }
-      .btn {
-        width: 100%;
-      }
-      .contact-panel {
-        padding: 1rem;
       }
     }
   </style>
 </head>
-<body>
+<body class="service-page">
   <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="/" class="brand">TriforSec Solutions</a>
-      <nav class="nav-links" aria-label="Principal">
+  <header class="service-topbar">
+    <div class="service-topbar-inner">
+      <a href="/" class="service-brand">TriforSec Solutions</a>
+      <nav class="service-nav" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/blog/">Blog</a>
         <a href="#contacto">Contacto</a>
@@ -384,16 +148,16 @@
   </header>
 
   <main id="contenido-principal">
-    <section class="hero">
-      <div class="hero-inner">
-        <span class="eyebrow">Servicio principal de entrada</span>
+    <section class="service-hero service-section">
+      <div class="service-hero-inner">
+        <span class="service-eyebrow">Servicio principal de entrada</span>
         <h1>Evaluación inicial de seguridad en Microsoft 365 para detectar riesgos antes de que se conviertan en incidentes</h1>
         <p>Analizamos configuración, exposición, controles básicos y prioridades de mejora en correo, identidades, dispositivos y datos para ayudarte a tomar decisiones con criterio técnico y sentido de negocio.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Quiero solicitar la evaluación</a>
-          <a href="#alcance" class="btn btn-secondary">Ver qué incluye</a>
+        <div class="service-hero-actions">
+          <a href="#contacto" class="service-btn service-btn-primary">Quiero solicitar la evaluación</a>
+          <a href="#alcance" class="service-btn service-btn-secondary">Ver qué incluye</a>
         </div>
-        <ul class="hero-points">
+        <ul class="service-hero-points">
           <li>Enfoque práctico para PYMES y equipos con tiempo limitado</li>
           <li>Priorización de hallazgos según impacto y urgencia</li>
           <li>Recomendaciones realistas sobre Microsoft 365 y seguridad</li>
@@ -445,10 +209,10 @@
       </div>
     </section>
 
-    <section class="steps">
-      <div class="container">
-        <h2 class="section-title">Cómo trabajamos esta evaluación</h2>
-        <p class="section-intro">Un proceso sencillo para pasar de incertidumbre técnica a un plan de acción más claro.</p>
+    <section class="service-steps service-section">
+      <div class="service-container">
+        <h2 class="service-title">Cómo trabajamos esta evaluación</h2>
+        <p class="service-intro">Un proceso sencillo para pasar de incertidumbre técnica a un plan de acción más claro.</p>
         <ol>
           <li><strong>1. Entendemos tu contexto</strong><br>Revisamos tu punto de partida, prioridades del negocio y preocupaciones actuales.</li>
           <li><strong>2. Evaluamos los controles clave</strong><br>Nos enfocamos en las áreas donde suelen aparecer los riesgos más relevantes.</li>
@@ -458,20 +222,20 @@
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="container">
-        <h2 class="section-title">Si ya tienes Microsoft 365, el momento de revisar tu postura de seguridad es ahora</h2>
-        <p class="section-intro">Una evaluación inicial puede evitar meses de improvisación y ayudarte a invertir tiempo y esfuerzo donde de verdad reduce riesgo.</p>
-        <a href="#contacto" class="btn btn-secondary">Solicitar evaluación inicial</a>
+    <section class="service-cta-band service-section">
+      <div class="service-container">
+        <h2 class="service-title">Si ya tienes Microsoft 365, el momento de revisar tu postura de seguridad es ahora</h2>
+        <p class="service-intro">Una evaluación inicial puede evitar meses de improvisación y ayudarte a invertir tiempo y esfuerzo donde de verdad reduce riesgo.</p>
+        <a href="#contacto" class="service-btn service-btn-secondary">Solicitar evaluación inicial</a>
       </div>
     </section>
 
-    <section id="contacto">
-      <div class="container">
-        <div class="contact-panel">
-          <h2 class="section-title">Solicita tu evaluación inicial</h2>
+    <section id="contacto" class="service-section">
+      <div class="service-container">
+        <div class="service-panel">
+          <h2 class="service-title">Solicita tu evaluación inicial</h2>
           <p>Cuéntanos brevemente tu contexto, tu principal preocupación o lo que quieres revisar en Microsoft 365. Te contactaremos por correo.</p>
-          <form action="https://formspree.io/f/mrbkagdn" method="POST">
+          <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
             <div>
               <label for="nombre">Nombre</label>
               <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
@@ -484,14 +248,14 @@
               <label for="mensaje">Mensaje</label>
               <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu entorno o tu principal preocupación"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+            <button type="submit" class="service-btn service-btn-primary">Enviar solicitud</button>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="service-footer">
     © 2025 TriforSec Solutions. Todos los derechos reservados.
     <a href="/">Inicio</a>
     <a href="/blog/">Blog</a>
