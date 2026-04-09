@@ -155,6 +155,16 @@
       transform: translateY(-2px);
       outline: none;
     }
+    .cta-button-secondary {
+      background: #fff;
+      color: #003366;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .cta-button-secondary:hover,
+    .cta-button-secondary:focus-visible {
+      background: #eef5fb;
+      color: #003366;
+    }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -201,6 +211,15 @@
     }
     .why-us {
       background: var(--clr-card);
+    }
+    .section-title {
+      text-align: center;
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.3rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
     }
     .why-us-grid {
       max-width: 1100px;
@@ -298,6 +317,12 @@
       border: 1px solid var(--clr-border);
       box-shadow: var(--shadow-sm);
     }
+    .form-helper {
+      margin: -0.25rem auto 1.5rem;
+      max-width: 620px;
+      color: var(--clr-text-soft);
+      font-size: 0.98rem;
+    }
     .form-group label {
       display: block;
       margin-bottom: 0.5rem;
@@ -378,6 +403,9 @@
       .contact-section form {
         padding: 1rem;
       }
+      .form-helper {
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
@@ -456,7 +484,7 @@
   </section>
 
   <section class="why-us" aria-labelledby="por-que-triforsec">
-    <h2 id="por-que-triforsec" style="text-align:center; color:#003366; margin-top:0;">Por qué trabajar con TriforSec Solutions</h2>
+    <h2 id="por-que-triforsec" class="section-title">Por qué trabajar con TriforSec Solutions</h2>
     <div class="section-intro">
       <p>La prioridad no es venderte herramientas por vender, sino ayudarte a reducir exposición y ordenar tu entorno de seguridad con criterio técnico y sentido operativo.</p>
     </div>
@@ -477,7 +505,7 @@
   </section>
 
   <section class="process" aria-labelledby="como-trabajamos">
-    <h2 id="como-trabajamos" style="color:#003366; margin-top:0;">Cómo trabajamos</h2>
+    <h2 id="como-trabajamos" class="section-title">Cómo trabajamos</h2>
     <div class="section-intro">
       <p>Un proceso simple para pasar de visibilidad limitada a una hoja de ruta clara de seguridad.</p>
     </div>
@@ -492,11 +520,12 @@
   <section class="cta-section" aria-labelledby="cta-principal-final">
     <h2 id="cta-principal-final">Da el siguiente paso con una revisión inicial</h2>
     <p>Si sospechas que tu entorno Microsoft 365 puede estar expuesto, desordenado o infrautilizado en seguridad, podemos ayudarte a entender por dónde empezar y qué corregir primero.</p>
-    <a href="#formulario" class="cta-button" style="background:#fff; color:#003366;">Quiero una evaluación inicial</a>
+    <a href="#formulario" class="cta-button cta-button-secondary">Quiero una evaluación inicial</a>
   </section>
 
   <section class="contact-section" id="formulario" aria-labelledby="titulo-contacto">
     <h2 id="titulo-contacto">Contáctanos</h2>
+    <p class="form-helper">Cuéntanos brevemente qué te preocupa o qué quieres mejorar. Te responderemos por correo.</p>
     <form action="https://formspree.io/f/mrbkagdn" method="POST">
       <div class="form-group">
         <label for="nombre">Nombre</label>
@@ -508,9 +537,9 @@
       </div>
       <div class="form-group">
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte? (opcional)"></textarea>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu necesidad, problema o proyecto"></textarea>
       </div>
-      <button type="submit">Enviar mensaje</button>
+      <button type="submit">Solicitar contacto</button>
     </form>
   </section>
   </main>
