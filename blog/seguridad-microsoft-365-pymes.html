@@ -20,6 +20,7 @@
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/soc.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -45,77 +46,35 @@
   </script>
 
   <style>
-    :root {
-      --primary: #0078d4;
-      --primary-dark: #005ea6;
-      --dark: #003366;
-      --bg: #f4f6f9;
-      --card: #fff;
-      --card-soft: #f8fbff;
-      --text: #1a1a1a;
-      --text-soft: #526174;
-      --border: #dbe6f1;
-      --radius: 14px;
-      --trans: 0.3s ease;
-      --shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
-      --shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
-    }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    header { position: relative; text-align:center; padding:5.5rem 1rem 3rem;
+    * { margin: 0; padding: 0; }
+    body { font-family:'Inter',sans-serif; }
+    .site-article-header {
       background:
         radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('https://triforsecsolutions.com/website_assets/soc.jpg') center/cover no-repeat; color:#fff;
+        url('https://triforsecsolutions.com/website_assets/soc.jpg') center/cover no-repeat;
     }
-    header::after { content:''; position:absolute; top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.72));z-index:0; }
-    .hero { position:relative; z-index:1; max-width:800px; margin:0 auto; }
-    header h1 { font-size:clamp(2rem, 1.6rem + 2vw, 3.1rem); margin-bottom:1rem; line-height:1.08; letter-spacing:-0.03em; }
-    header p { font-size:clamp(1rem, 0.96rem + 0.4vw, 1.18rem); color:rgba(255,255,255,0.92); }
-
-    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
-    article { background:linear-gradient(180deg, #ffffff, var(--card-soft)); padding:2rem; border-radius:var(--radius);
-      border:1px solid var(--border); box-shadow:var(--shadow-sm);
-    }
-    article h2 { color:var(--dark); margin-top:2rem; font-size:1.5rem; }
-    article p, article ul { margin:1rem 0; color:var(--text-soft); }
-    article ul { list-style: none; padding-left:0; }
-    article li { margin:0.75rem 0; padding-left:1.6rem; position:relative; }
-    article li::before {
-      content:'✓';
-      position:absolute;
-      left:0;
-      top:0;
-      color:var(--primary);
-      font-weight:800;
-    }
-    article strong { color:var(--primary); }
-
-    .footer-actions { text-align:center; margin:2rem 0; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--primary); color:#fff;
-      padding:0.85rem 1.45rem; margin:0.5rem; border-radius:999px;
-      font-weight:700; text-decoration:none; box-shadow:0 12px 30px rgba(0, 120, 212, 0.22); transition:transform var(--trans), box-shadow var(--trans), background var(--trans);
-    }
-    .btn:hover, .btn:focus-visible { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,0.12); }
-
-    footer { text-align:center; margin:2rem 1rem; font-size:0.875rem; color:#666; border-top:1px solid var(--border); padding-top:1.5rem; }
-
-    @media (max-width: 640px) {
-      header { padding: 4.5rem 1rem 2.5rem; }
-      article { padding: 1.4rem; }
-      .btn { width: 100%; margin: 0.5rem 0; }
+    .site-article-card ul { list-style: none; padding-left: 0; }
+    .site-article-card li { margin: 0.75rem 0; padding-left: 1.6rem; position: relative; color: var(--site-text-soft); }
+    .site-article-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--site-primary);
+      font-weight: 800;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="hero">
+  <header class="site-article-header">
+    <div class="site-article-hero">
       <h1>Seguridad en Microsoft 365 para PYMES</h1>
       <p>Protege tu negocio con Defender XDR, Intune, Purview y más.</p>
     </div>
   </header>
 
-  <main>
-    <article>
+  <main class="site-article-main">
+    <article class="site-article-card">
       <p><strong>Publicado:</strong> 1 de mayo de 2025</p>
       <p>Las pequeñas y medianas empresas (PYMES) son objetivos frecuentes de ciberataques debido a configuraciones débiles y falta de monitoreo.</p>
 
@@ -133,14 +92,14 @@
 
       <em>Tu información vale más de lo que crees. Protege tu negocio hoy.</em>
 
-      <div class="footer-actions">
-        <a href="/" class="btn">Inicio</a>
-        <a href="mailto:info@triforsecsolutions.com" class="btn">Contáctanos</a>
+      <div class="site-footer-actions">
+        <a href="/" class="site-pill-button">Inicio</a>
+        <a href="mailto:info@triforsecsolutions.com" class="site-pill-button">Contáctanos</a>
       </div>
     </article>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     &copy; 2025 TriforSec Solutions. Todos los derechos reservados. info@triforsecsolutions.com
   </footer>
 </body>
