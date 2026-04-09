@@ -46,29 +46,37 @@
   <style>
     :root {
       --primary: #0078d4;
+      --primary-dark: #005ea6;
       --dark: #003366;
       --bg: #f4f6f9;
       --card: #fff;
+      --card-soft: #f8fbff;
       --text: #1a1a1a;
-      --radius: 8px;
+      --text-soft: #526174;
+      --border: #dbe6f1;
+      --radius: 14px;
       --trans: 0.3s ease;
+      --shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
+      --shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
     }
     * { box-sizing: border-box; margin:0; padding:0; }
     body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    header { position: relative; text-align:center; padding:4rem 1rem 2rem;
-      background:url('https://triforsecsolutions.com/website_assets/m365-hero.jpg') center/cover no-repeat; color:#fff;
+    header { position: relative; text-align:center; padding:5.5rem 1rem 3rem;
+      background:
+        radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
+        url('https://triforsecsolutions.com/website_assets/soc.jpg') center/cover no-repeat; color:#fff;
     }
-    header::after { content:''; position:absolute; top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:0; }
+    header::after { content:''; position:absolute; top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.72));z-index:0; }
     .hero { position:relative; z-index:1; max-width:800px; margin:0 auto; }
-    header h1 { font-size:2.5rem; margin-bottom:1rem; }
-    header p { font-size:1.125rem; }
+    header h1 { font-size:clamp(2rem, 1.6rem + 2vw, 3.1rem); margin-bottom:1rem; line-height:1.08; letter-spacing:-0.03em; }
+    header p { font-size:clamp(1rem, 0.96rem + 0.4vw, 1.18rem); color:rgba(255,255,255,0.92); }
 
     main { max-width:800px; margin:2rem auto; padding:0 1rem; }
-    article { background:var(--card); padding:2rem; border-radius:var(--radius);
-      box-shadow:0 8px 24px rgba(0,0,0,0.05);
+    article { background:linear-gradient(180deg, #ffffff, var(--card-soft)); padding:2rem; border-radius:var(--radius);
+      border:1px solid var(--border); box-shadow:var(--shadow-sm);
     }
     article h2 { color:var(--dark); margin-top:2rem; font-size:1.5rem; }
-    article p, article ul { margin:1rem 0; }
+    article p, article ul { margin:1rem 0; color:var(--text-soft); }
     article ul { list-style: none; padding-left:0; }
     article li { margin:0.75rem 0; padding-left:1.5rem; position:relative; }
     article li::before { content:'\f058'; font-family:'Font Awesome 6 Free'; font-weight:900;
@@ -78,11 +86,10 @@
 
     .footer-actions { text-align:center; margin:2rem 0; }
     .btn { display:inline-flex; align-items:center; background:var(--primary); color:#fff;
-      padding:0.75rem 1.5rem; margin:0.5rem; border-radius:var(--radius);
-      font-weight:600; text-decoration:none; transition:transform var(--trans), box-shadow var(--trans);
+      padding:0.85rem 1.45rem; margin:0.5rem; border-radius:999px;
+      font-weight:700; text-decoration:none; box-shadow:0 12px 30px rgba(0, 120, 212, 0.22); transition:transform var(--trans), box-shadow var(--trans), background var(--trans);
     }
-    .btn i { margin-left:0.5rem; }
-    .btn:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    .btn:hover { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,0.12); }
 
     footer { text-align:center; margin:2rem 1rem; font-size:0.875rem; color:#666; }
   </style>
