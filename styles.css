@@ -293,6 +293,8 @@ header.site-topbar {
   padding: 0 1.5rem;
 }
 
+/* Higher specificity to win over `.site-article-card a` */
+.site-article-card a.site-pill-button,
 .site-pill-button {
   display: inline-flex;
   align-items: center;
@@ -310,14 +312,18 @@ header.site-topbar {
   border: 1px solid transparent;
 }
 
+.site-article-card a.site-pill-button:hover,
+.site-article-card a.site-pill-button:focus-visible,
 .site-pill-button:hover,
 .site-pill-button:focus-visible {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 12px 36px rgba(79, 158, 255, 0.5);
   color: #fff;
+  text-decoration: none;
 }
 
+.site-article-card a.site-pill-button.site-pill-secondary,
 .site-pill-button.site-pill-secondary,
 .site-pill-button-secondary {
   background: var(--surface);
@@ -326,6 +332,7 @@ header.site-topbar {
   box-shadow: none;
 }
 
+.site-article-card a.site-pill-button.site-pill-secondary:hover,
 .site-pill-button.site-pill-secondary:hover,
 .site-pill-button-secondary:hover {
   background: var(--surface-2);

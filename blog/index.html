@@ -38,7 +38,7 @@
     .blog-list {
       display: grid;
       gap: 1.25rem;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       max-width: var(--container);
       margin: 0 auto;
     }
@@ -46,96 +46,93 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      overflow: hidden;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      transition: transform var(--transition), border-color var(--transition);
+      gap: 1rem;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
       position: relative;
+      overflow: hidden;
+    }
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(79, 158, 255, 0.06), transparent 50%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
     }
     .blog-card:hover {
       transform: translateY(-4px);
       border-color: var(--border-accent);
+      background: var(--surface-2);
     }
-    .blog-card-media {
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-3) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .blog-card-media::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(79, 158, 255, 0.18), transparent 60%),
-        radial-gradient(circle at bottom left, rgba(0, 212, 255, 0.1), transparent 60%);
-    }
-    .blog-card-media::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
+    .blog-card:hover::before { opacity: 1; }
+    .blog-card > * { position: relative; }
+    .blog-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
     }
     .blog-card-tag {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
       font-family: var(--ff-mono);
       font-size: 0.72rem;
       color: var(--accent);
-      background: rgba(10,13,20,0.7);
-      backdrop-filter: blur(8px);
       padding: 0.3rem 0.65rem;
       border-radius: 999px;
       border: 1px solid var(--border-accent);
-      z-index: 1;
-      letter-spacing: 0.04em;
+      background: rgba(79, 158, 255, 0.06);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-    .blog-card-body {
-      padding: 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+      white-space: nowrap;
     }
     .blog-card-meta {
       font-family: var(--ff-mono);
       font-size: 0.78rem;
       color: var(--text-mute);
-      margin-bottom: 0.75rem;
       letter-spacing: 0.04em;
     }
     .blog-card h3 {
-      font-size: 1.2rem;
+      font-size: clamp(1.3rem, 1.15rem + 0.4vw, 1.55rem);
       font-weight: 700;
-      letter-spacing: -0.015em;
-      line-height: 1.25;
-      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0.25rem 0 0.25rem;
       color: var(--text);
     }
     .blog-card h3 a { color: inherit; text-decoration: none; }
-    .blog-card h3 a:hover { color: var(--accent-hover); }
+    .blog-card:hover h3 a { color: var(--accent-hover); }
     .blog-card p {
       color: var(--text-soft);
-      margin: 0 0 1.25rem;
-      font-size: 0.95rem;
-      line-height: 1.55;
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.6;
       flex: 1;
     }
     .blog-card-link {
       align-self: flex-start;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--accent);
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
     }
     .blog-card-link svg { width: 14px; height: 14px; transition: transform var(--transition); }
-    .blog-card:hover .blog-card-link svg { transform: translateX(3px); }
+    .blog-card:hover .blog-card-link svg { transform: translateX(4px); }
+    .blog-card:hover .blog-card-link { color: var(--accent-hover); }
+    @media (max-width: 640px) {
+      .blog-card { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body class="service-page">
@@ -176,41 +173,29 @@
       <div class="blog-list">
 
         <article class="blog-card reveal">
-          <a href="/blog/seguridad-microsoft-365-pymes.html" aria-hidden="true" tabindex="-1" style="display:block">
-            <div class="blog-card-media">
-              <span class="blog-card-tag">M365 · Security</span>
-            </div>
-          </a>
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <time datetime="2025-05-01">01 May 2025</time>
-            </div>
-            <h3><a href="/blog/seguridad-microsoft-365-pymes.html">Seguridad en Microsoft 365 para PYMES</a></h3>
-            <p>Cómo proteger correo, identidades, endpoints y datos en una PYME que ya vive en Microsoft 365 — usando lo que viene con tu licencia, no productos extra.</p>
-            <a href="/blog/seguridad-microsoft-365-pymes.html" class="blog-card-link">
-              Leer artículo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
+          <div class="blog-card-head">
+            <span class="blog-card-tag">M365 · Security</span>
+            <span class="blog-card-meta"><time datetime="2025-05-01">01 May 2025</time></span>
           </div>
+          <h3><a href="/blog/seguridad-microsoft-365-pymes.html">Seguridad en Microsoft 365 para PYMES</a></h3>
+          <p>Cómo proteger correo, identidades, endpoints y datos en una PYME que ya vive en Microsoft 365 — usando lo que viene con tu licencia, no productos extra.</p>
+          <a href="/blog/seguridad-microsoft-365-pymes.html" class="blog-card-link">
+            Leer artículo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </article>
 
         <article class="blog-card reveal">
-          <a href="/blog/dns-explicacion-tecnica.html" aria-hidden="true" tabindex="-1" style="display:block">
-            <div class="blog-card-media">
-              <span class="blog-card-tag">DNS · Infra</span>
-            </div>
-          </a>
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <time datetime="2025-04-15">15 Abr 2025</time>
-            </div>
-            <h3><a href="/blog/dns-explicacion-tecnica.html">¿Qué es el DNS y cómo afecta tu seguridad?</a></h3>
-            <p>Funcionamiento técnico del DNS — interno y externo — y por qué entender cómo resuelve nombres tu empresa es la base para cerrar muchos vectores de ataque.</p>
-            <a href="/blog/dns-explicacion-tecnica.html" class="blog-card-link">
-              Leer artículo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
+          <div class="blog-card-head">
+            <span class="blog-card-tag">DNS · Infra</span>
+            <span class="blog-card-meta"><time datetime="2025-04-15">15 Abr 2025</time></span>
           </div>
+          <h3><a href="/blog/dns-explicacion-tecnica.html">¿Qué es el DNS y cómo afecta tu seguridad?</a></h3>
+          <p>Funcionamiento técnico del DNS — interno y externo — y por qué entender cómo resuelve nombres tu empresa es la base para cerrar muchos vectores de ataque.</p>
+          <a href="/blog/dns-explicacion-tecnica.html" class="blog-card-link">
+            Leer artículo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </article>
 
       </div>
