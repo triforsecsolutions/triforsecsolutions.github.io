@@ -4,115 +4,319 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Defender XDR para PYMES | TriforSec Solutions</title>
-  <meta name="description" content="Ayudamos a implementar y ordenar Microsoft Defender XDR para PYMES que necesitan más visibilidad, mejor detección y una respuesta más madura ante amenazas." />
+  <meta name="description" content="Implementación de Microsoft Defender XDR para PYMES. Correlacionamos señales de correo, identidad y endpoint para reducir ruido de alertas y acelerar respuesta a incidentes." />
   <meta name="author" content="TriforSec Solutions" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d14" />
   <link rel="canonical" href="https://triforsecsolutions.com/defender-xdr-pymes.html" />
   <meta property="og:title" content="Defender XDR para PYMES | TriforSec Solutions" />
-  <meta property="og:description" content="Mejora la detección y respuesta ante amenazas con una implementación práctica de Microsoft Defender XDR para PYMES." />
+  <meta property="og:description" content="Menos alertas, más detecciones que sí importan. Correlación real entre MDO, MDE, MDI y MDCA sobre Microsoft 365." />
   <meta property="og:image" content="https://triforsecsolutions.com/website_assets/soc.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/defender-xdr-pymes.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Defender XDR para PYMES | TriforSec Solutions" />
-  <meta name="twitter:description" content="Implementación práctica de Microsoft Defender XDR para empresas que quieren reducir exposición y mejorar visibilidad." />
+  <meta name="twitter:description" content="Implementación aterrizada de Microsoft Defender XDR para PYMES con licenciamiento M365 E5." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/soc.jpg" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/service-pages.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Implementación de Defender XDR para PYMES",
-    "provider": {
-      "@type": "Organization",
-      "name": "TriforSec Solutions",
-      "url": "https://triforsecsolutions.com/"
-    },
-    "serviceType": "Defender XDR Implementation",
-    "areaServed": "MX",
+    "name": "Implementación de Microsoft Defender XDR",
+    "provider": {"@type":"Organization","name":"TriforSec Solutions","url":"https://triforsecsolutions.com/"},
+    "serviceType": "XDR Implementation",
+    "areaServed": ["MX","LATAM"],
     "url": "https://triforsecsolutions.com/defender-xdr-pymes.html",
-    "description": "Servicio para fortalecer detección, correlación y respuesta con Microsoft Defender XDR en PYMES."
+    "description": "Implementación y operación inicial de Microsoft Defender XDR — MDO, MDE, MDI, MDCA — para PYMES sobre Microsoft 365."
   }
   </script>
-  <style>
-    * { margin:0; padding:0; }
-    .service-hero {
-      background-image: radial-gradient(circle at top, rgba(0,163,255,.18), transparent 35%), url('website_assets/soc.jpg');
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Qué licencia Microsoft 365 necesito para Defender XDR completo?","acceptedAnswer":{"@type":"Answer","text":"Microsoft 365 E5 o las licencias standalone equivalentes: Defender for Office 365 Plan 2, Defender for Endpoint Plan 2, Defender for Identity y Defender for Cloud Apps. Business Premium cubre MDO P1 y MDE P1 — útil pero no es XDR completo."}},
+      {"@type":"Question","name":"¿En cuánto tiempo veo valor?","acceptedAnswer":{"@type":"Answer","text":"Las primeras detecciones útiles aparecen en 2–3 semanas tras onboarding completo. La correlación cross-vector y la reducción real de ruido toma 6–8 semanas de tuning sobre tu entorno."}},
+      {"@type":"Question","name":"¿Sustituye a un SIEM?","acceptedAnswer":{"@type":"Answer","text":"No del todo. Defender XDR cubre el dominio Microsoft con detección y respuesta. Para correlación con logs externos (firewalls, on-prem, SaaS no-Microsoft) sigue siendo recomendable Sentinel u otro SIEM como capa superior."}}
+    ]
+  }
+  </script>
 </head>
 <body class="service-page">
-  <header class="service-topbar">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="service-topbar" id="topbar">
     <div class="service-topbar-inner">
-      <a href="/" class="service-brand">TriforSec Solutions</a>
+      <a href="/" class="service-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>TriforSec Solutions</span>
+      </a>
       <nav class="service-nav" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a>
         <a href="/blog/">Blog</a>
+        <a href="#contacto" class="service-nav-cta">Hablemos</a>
       </nav>
     </div>
   </header>
-  <main>
+
+  <main id="main">
+
     <section class="service-hero service-section">
       <div class="service-hero-inner">
-        <h1>Defender XDR para PYMES que necesitan ver mejor, detectar antes y responder con más criterio</h1>
-        <p>Te ayudamos a ordenar e implementar Microsoft Defender XDR para que tu empresa tenga mejor visibilidad, menos puntos ciegos y una respuesta más madura ante amenazas reales.</p>
-        <a href="#contacto" class="service-btn service-btn-primary">Quiero hablar de Defender XDR</a>
+        <span class="service-pill">
+          <span class="service-pill-dot" aria-hidden="true"></span>
+          Defender XDR · MDO · MDE · MDI · MDCA
+        </span>
+        <h1>
+          Menos alertas, más
+          <span class="accent">detecciones que sí importan</span>
+        </h1>
+        <p>Implementamos Microsoft Defender XDR con criterio: correlación real entre correo, identidad, endpoint y SaaS, reducción de ruido en alertas y respuesta automatizada donde aporta. No comprar herramienta, sí dejarla funcionando.</p>
+        <div class="service-hero-actions">
+          <a href="#contacto" class="service-btn service-btn-primary">
+            Hablar de Defender XDR
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/evaluacion-inicial-microsoft-365.html" class="service-btn service-btn-secondary">Empezar con evaluación</a>
+        </div>
+        <ul class="service-hero-points">
+          <li>Onboarding de MDO, MDE, MDI y MDCA con orden técnico, no en paralelo caótico</li>
+          <li>Tuning de alertas para que tu equipo deje de ignorar el portal</li>
+          <li>Playbooks de respuesta automatizada para incidentes comunes</li>
+        </ul>
       </div>
     </section>
+
     <section class="service-section">
-      <div class="service-container">
-        <h2 class="service-title">Qué aporta Defender XDR</h2>
-        <p class="service-intro">No se trata solo de tener alertas. Se trata de correlacionar señales, reducir ruido y detectar incidentes con mejor contexto.</p>
-        <div class="service-grid">
-          <article class="service-card"><h3>Visibilidad consolidada</h3><p>Unifica señales de correo, identidades, endpoints y otros vectores relevantes.</p></article>
-          <article class="service-card"><h3>Detección más útil</h3><p>Ayuda a identificar actividad sospechosa con mejor contexto que soluciones aisladas.</p></article>
-          <article class="service-card"><h3>Respuesta más madura</h3><p>Permite investigar incidentes con mayor criterio y priorizar mejor las acciones.</p></article>
-        </div>
+      <div class="service-section-eyebrow">El problema</div>
+      <h2 class="service-title">Por qué Defender XDR sin criterio termina sin usarse</h2>
+      <p class="service-intro">Estos son los patrones que vemos repetidamente en PYMES con E5 ya pagado:</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>"Tenemos miles de alertas"</h3>
+          <p>Sin tuning, el portal genera ruido. El equipo deja de mirarlo. Los incidentes reales se pierden entre falsos positivos.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>"Compramos E5, pero nadie lo configuró"</h3>
+          <p>MDE sin onboarding completo de endpoints. MDI sin sensores. MDCA sin políticas. La licencia paga, el valor no llega.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>"Cada producto va por su lado"</h3>
+          <p>Sin correlación entre MDO, MDE, MDI y MDCA, perdemos lo que distingue XDR: ver el incidente completo, no fragmentos aislados.</p>
+        </article>
       </div>
     </section>
+
     <section class="service-section">
-      <div class="service-container">
-        <h2 class="service-title">Dónde ayudamos</h2>
-        <div class="service-grid">
-          <article class="service-card"><h3>Evaluación de cobertura</h3><p>Revisamos qué componentes están realmente activos y qué parte del valor aún no se está aprovechando.</p></article>
-          <article class="service-card"><h3>Orden de implementación</h3><p>Definimos una secuencia realista para mejorar visibilidad y reducir fricción operativa.</p></article>
-          <article class="service-card"><h3>Ajustes iniciales</h3><p>Te ayudamos a priorizar configuraciones y decisiones clave para empezar con más solidez.</p></article>
+      <div class="service-section-eyebrow">Capacidades</div>
+      <h2 class="service-title">Qué activamos y cómo</h2>
+      <p class="service-intro">Cuatro pilares de Defender XDR. Cada uno implementado en su orden, con responsable interno y criterio de aceptación.</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-card-num">// MDO</div>
+          <h3>Defender for Office 365</h3>
+          <p>Anti-phishing avanzado, Safe Links, Safe Attachments, simulaciones controladas y políticas anti-spoofing. La puerta de entrada favorita del atacante.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// MDE</div>
+          <h3>Defender for Endpoint</h3>
+          <p>EDR sobre Windows, macOS y Linux. ASR rules, control de aplicaciones, investigación automatizada y aislamiento de equipos comprometidos.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// MDI</div>
+          <h3>Defender for Identity</h3>
+          <p>Detección de comportamiento anómalo en AD on-prem y Entra ID. Kerberoasting, pass-the-hash, golden ticket, reconocimiento y lateral movement.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// MDCA</div>
+          <h3>Defender for Cloud Apps</h3>
+          <p>Visibilidad de Shadow IT, control de OAuth apps abusivas, políticas de sesión sobre Microsoft 365 y descubrimiento de uso real de SaaS.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Entregables</div>
+      <h2 class="service-title">Qué dejamos operando</h2>
+
+      <div class="service-deliverables">
+        <h3>Output del proyecto</h3>
+        <ul>
+          <li>MDO, MDE, MDI y MDCA configurados y correlacionando en el portal unificado</li>
+          <li>Endpoints onboarded (script, Intune o GPO según contexto)</li>
+          <li>Políticas anti-phishing, Safe Links y Safe Attachments tuneadas</li>
+          <li>Alert tuning inicial — falsos positivos reducidos, alertas con contexto</li>
+          <li>Playbooks de respuesta automatizada para incidentes comunes</li>
+          <li>Runbooks de operación para tu equipo (BAU)</li>
+          <li>Documentación de arquitectura y decisiones de diseño</li>
+          <li>Sesión de handoff y capacitación operativa</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Metodología</div>
+      <h2 class="service-title">Cómo trabajamos</h2>
+
+      <div class="service-steps">
+        <div class="service-step reveal">
+          <span class="service-step-num">01 · Discovery</span>
+          <div>
+            <h3>Auditamos qué tienes activo hoy</h3>
+            <p>Licenciamiento real, productos parcialmente desplegados, gaps de cobertura, integraciones rotas. La realidad antes del plan.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">02 · Diseño</span>
+          <div>
+            <h3>Arquitectura de despliegue por capas</h3>
+            <p>Orden de activación, dependencias, ventanas de cambio, criterios de aceptación. MDE antes que MDCA, MDI antes que correlación cross-vector.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">03 · Implementación</span>
+          <div>
+            <h3>Despliegue controlado, no big-bang</h3>
+            <p>Onboarding por anillos. Tuning sobre data real. Validación de detección con test cases. Sin romper la operación.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">04 · Operación</span>
+          <div>
+            <h3>Handoff a tu equipo con runbooks reales</h3>
+            <p>Documentación clara, escalación definida, playbooks para incidentes frecuentes. Dejamos tu IT sabiendo qué mirar y qué ignorar.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="service-cta-band service-section">
-      <div class="service-container">
-        <h2 class="service-title">Defender XDR tiene más valor cuando se implementa con prioridad y criterio</h2>
-        <p class="service-intro">Si ya tienes licencias o estás evaluando este camino, podemos ayudarte a aterrizarlo de forma práctica.</p>
-        <a href="#contacto" class="service-btn service-btn-secondary">Solicitar conversación inicial</a>
+
+    <section class="service-cta-band">
+      <div class="service-cta-banner">
+        <h2>¿Ya pagas E5 pero no lo estás usando?</h2>
+        <p>Empecemos con una evaluación inicial corta. Te decimos qué tan implementado está realmente Defender XDR en tu tenant y por dónde tiene sentido empezar.</p>
+        <a href="/evaluacion-inicial-microsoft-365.html" class="service-btn service-btn-primary">
+          Solicitar evaluación inicial
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </section>
-    <section id="contacto" class="service-section">
-      <div class="service-container">
-        <div class="service-panel">
-          <h2 class="service-title">Hablemos de tu entorno</h2>
-          <p>Cuéntanos qué te preocupa hoy en detección, alertas, visibilidad o respuesta sobre Microsoft 365.</p>
-          <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
-            <div><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" autocomplete="name" required /></div>
-            <div><label for="email">Correo electrónico</label><input id="email" type="email" name="email" autocomplete="email" required /></div>
-            <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu entorno o tu necesidad"></textarea></div>
-            <button type="submit" class="service-btn service-btn-primary">Enviar mensaje</button>
-          </form>
+
+    <section class="service-section" id="faq">
+      <div class="service-section-eyebrow">Preguntas frecuentes</div>
+      <h2 class="service-title">Defender XDR sin marketing</h2>
+
+      <div class="service-faq">
+        <details class="service-faq-item">
+          <summary>¿Qué licencia Microsoft 365 necesito para Defender XDR completo?</summary>
+          <p>Microsoft 365 E5 o las licencias standalone equivalentes: Defender for Office 365 Plan 2, Defender for Endpoint Plan 2, Defender for Identity y Defender for Cloud Apps. Business Premium cubre MDO P1 y MDE P1 — útil, pero no es XDR completo.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿En cuánto tiempo veo valor real?</summary>
+          <p>Las primeras detecciones útiles aparecen en 2–3 semanas tras onboarding completo de endpoints. La correlación cross-vector y la reducción real de ruido en alertas toma 6–8 semanas de tuning sobre tu entorno específico.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Sustituye a un SIEM o a Sentinel?</summary>
+          <p>No del todo. Defender XDR cubre el dominio Microsoft con detección y respuesta. Para correlación con logs externos (firewalls, on-prem, SaaS no-Microsoft) sigue siendo recomendable Microsoft Sentinel u otro SIEM como capa superior. Lo evaluamos contigo según tamaño y compliance.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Pueden operarlo después de implementarlo?</summary>
+          <p>Por diseño, te dejamos operable internamente. Para PYMES que no tienen equipo para BAU, ofrecemos modelo de acompañamiento mensual con triage de alertas críticas. Lo evaluamos según madurez de tu IT.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Sirve si tengo dispositivos no-Windows?</summary>
+          <p>Sí. Defender for Endpoint cubre Windows, macOS, Linux, iOS y Android. La cobertura varía por plataforma — lo dejamos claro en el alcance.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="service-section" id="contacto">
+      <div class="service-contact-grid">
+        <div class="service-contact-left">
+          <div class="service-section-eyebrow" style="text-align:left">Contacto</div>
+          <h2>Hablemos de tu entorno</h2>
+          <p>Cuéntanos qué tienes activo, qué no funciona y qué te gustaría detectar mejor. Respuesta con criterio técnico, no con plantilla comercial.</p>
+          <div class="service-contact-meta">
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <span><strong>Correo</strong><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></span>
+            </div>
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span><strong>Respuesta</strong>Horas hábiles · Lun–Vie</span>
+            </div>
+          </div>
         </div>
+
+        <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
+          <div><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required /></div>
+          <div><label for="email">Correo</label><input id="email" type="email" name="email" placeholder="tu@empresa.com" autocomplete="email" required /></div>
+          <div><label for="empresa">Empresa <span style="color:var(--text-mute);font-weight:400;">(opcional)</span></label><input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" /></div>
+          <div><label for="mensaje">¿Qué necesitas resolver?</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Licenciamiento actual, productos Defender activos, ruido de alertas, expectativas"></textarea></div>
+          <input type="hidden" name="_subject" value="Solicitud · Defender XDR" />
+          <button type="submit">Enviar mensaje</button>
+          <p class="service-form-note">Al enviar aceptas que usemos tus datos solo para responder esta consulta.</p>
+        </form>
       </div>
     </section>
+
   </main>
+
   <footer class="service-footer">
-    © 2025 TriforSec Solutions.
-    <a href="/">Inicio</a>
-    <a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a>
-    <a href="/blog/">Blog</a>
+    <div class="service-footer-inner">
+      <div class="service-footer-col service-footer-brand">
+        <a href="/" class="service-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>TriforSec Solutions</span>
+        </a>
+        <p>Consultoría de ciberseguridad sobre Microsoft 365 para PYMES. Defender XDR · Purview · Intune · Identity.</p>
+      </div>
+      <div class="service-footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/defender-xdr-pymes.html">Defender XDR</a></li>
+          <li><a href="/purview-pymes.html">Purview</a></li>
+          <li><a href="/intune-pymes.html">Intune</a></li>
+          <li><a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a></li>
+        </ul>
+      </div>
+      <div class="service-footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-footer-bottom">
+      <span>© 2026 TriforSec Solutions. Todos los derechos reservados.</span>
+      <span>Hecho con criterio en México</span>
+    </div>
   </footer>
+
+  <script>
+    (function(){
+      var bar=document.getElementById('topbar');
+      window.addEventListener('scroll',function(){bar.classList.toggle('scrolled',window.scrollY>24);},{passive:true});
+      if('IntersectionObserver' in window){
+        var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});
+      } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); }
+    })();
+  </script>
 </body>
 </html>

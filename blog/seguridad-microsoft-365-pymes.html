@@ -46,22 +46,28 @@
   </script>
 
   <style>
-    * { margin: 0; padding: 0; }
-    body { font-family:'Inter',sans-serif; }
     .site-article-header {
-      background:
-        radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('https://triforsecsolutions.com/website_assets/soc.jpg') center/cover no-repeat;
+      background: linear-gradient(180deg, transparent 0%, rgba(79, 158, 255, 0.06) 100%);
     }
     .site-article-card ul { list-style: none; padding-left: 0; }
-    .site-article-card li { margin: 0.75rem 0; padding-left: 1.6rem; position: relative; color: var(--site-text-soft); }
+    .site-article-card li { margin: 0.75rem 0; padding-left: 1.75rem; position: relative; color: var(--site-text-soft); }
     .site-article-card li::before {
-      content: '✓';
+      content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--site-primary);
-      font-weight: 800;
+      left: 0; top: 0.5rem;
+      width: 14px; height: 14px;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      border-radius: 4px;
+    }
+    .site-article-card li::after {
+      content: '';
+      position: absolute;
+      left: 4px; top: 0.78rem;
+      width: 7px; height: 4px;
+      border-left: 2px solid var(--success);
+      border-bottom: 2px solid var(--success);
+      transform: rotate(-45deg);
     }
   </style>
 </head>

@@ -3,116 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intune para PYMES | TriforSec Solutions</title>
-  <meta name="description" content="Ayudamos a organizar Microsoft Intune para PYMES que necesitan más control sobre dispositivos, configuración y seguridad sin complicar la operación." />
+  <title>Microsoft Intune para PYMES | TriforSec Solutions</title>
+  <meta name="description" content="Gestión centralizada de dispositivos con Microsoft Intune. Políticas de cumplimiento, configuración por anillos y endpoints que cumplen — o no acceden. Windows, macOS, iOS y Android." />
   <meta name="author" content="TriforSec Solutions" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d14" />
   <link rel="canonical" href="https://triforsecsolutions.com/intune-pymes.html" />
-  <meta property="og:title" content="Intune para PYMES | TriforSec Solutions" />
-  <meta property="og:description" content="Implementación práctica de Microsoft Intune para mejorar gestión, cumplimiento y seguridad de dispositivos en PYMES." />
+  <meta property="og:title" content="Microsoft Intune para PYMES | TriforSec Solutions" />
+  <meta property="og:description" content="MDM y MAM con criterio. Endpoints que cumplen, o no acceden. Acceso condicional integrado con Entra ID." />
   <meta property="og:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/intune-pymes.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Intune para PYMES | TriforSec Solutions" />
-  <meta name="twitter:description" content="Fortalece control y seguridad de dispositivos con Microsoft Intune sin sobrecomplicar tu entorno." />
+  <meta name="twitter:title" content="Microsoft Intune para PYMES | TriforSec Solutions" />
+  <meta name="twitter:description" content="Gestión centralizada de dispositivos sobre Microsoft 365." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/service-pages.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Implementación de Intune para PYMES",
-    "provider": {
-      "@type": "Organization",
-      "name": "TriforSec Solutions",
-      "url": "https://triforsecsolutions.com/"
-    },
-    "serviceType": "Intune Implementation",
-    "areaServed": "MX",
+    "name": "Implementación de Microsoft Intune",
+    "provider": {"@type":"Organization","name":"TriforSec Solutions","url":"https://triforsecsolutions.com/"},
+    "serviceType": "Endpoint Management (MDM/MAM)",
+    "areaServed": ["MX","LATAM"],
     "url": "https://triforsecsolutions.com/intune-pymes.html",
-    "description": "Servicio para organizar la gestión y seguridad de dispositivos con Microsoft Intune en PYMES."
+    "description": "Gestión de dispositivos, políticas de cumplimiento y acceso condicional con Microsoft Intune para PYMES."
   }
   </script>
-  <style>
-    * { margin:0; padding:0; }
-    .service-hero {
-      background-image: radial-gradient(circle at top, rgba(0,163,255,.18), transparent 35%), url('website_assets/hero.jpg');
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Qué dispositivos soporta Intune?","acceptedAnswer":{"@type":"Answer","text":"Windows 10/11, macOS, iOS, iPadOS y Android (Enterprise, Personal y Dedicado). Soporta tanto equipos corporativos (Autopilot, ADE) como BYOD con MAM sin inscripción."}},
+      {"@type":"Question","name":"¿Cuánto tarda un despliegue base?","acceptedAnswer":{"@type":"Answer","text":"Un despliegue base con baseline de configuración, BitLocker, políticas de cumplimiento e integración con Conditional Access toma 4–6 semanas. Autopilot y migración de equipos existentes añaden 2–4 semanas según volumen."}},
+      {"@type":"Question","name":"¿Funciona con equipos personales (BYOD)?","acceptedAnswer":{"@type":"Answer","text":"Sí. App Protection Policies (MAM) protegen datos corporativos en apps específicas sin enrolar el dispositivo personal. Ideal para móviles del empleado que acceden a correo o Teams."}}
+    ]
+  }
+  </script>
 </head>
 <body class="service-page">
-  <header class="service-topbar">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="service-topbar" id="topbar">
     <div class="service-topbar-inner">
-      <a href="/" class="service-brand">TriforSec Solutions</a>
+      <a href="/" class="service-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>TriforSec Solutions</span>
+      </a>
       <nav class="service-nav" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a>
         <a href="/blog/">Blog</a>
+        <a href="#contacto" class="service-nav-cta">Hablemos</a>
       </nav>
     </div>
   </header>
-  <main>
+
+  <main id="main">
+
     <section class="service-hero service-section">
       <div class="service-hero-inner">
-        <h1>Intune para PYMES que necesitan más control sobre dispositivos sin volver su operación inmanejable</h1>
-        <p>Te ayudamos a aterrizar Microsoft Intune con una lógica práctica para mejorar configuración, cumplimiento y seguridad de equipos corporativos.</p>
-        <a href="#contacto" class="service-btn service-btn-primary">Quiero hablar de Intune</a>
+        <span class="service-pill">
+          <span class="service-pill-dot" aria-hidden="true"></span>
+          Microsoft Intune · MDM · MAM · Autopilot · Conditional Access
+        </span>
+        <h1>
+          Endpoints que cumplen,
+          <span class="accent">o no acceden</span>
+        </h1>
+        <p>Gestión centralizada de Windows, macOS, iOS y Android sobre Microsoft 365. Políticas de cumplimiento conectadas a acceso condicional: si el equipo no cumple, no entra a tu correo, Teams o SharePoint.</p>
+        <div class="service-hero-actions">
+          <a href="#contacto" class="service-btn service-btn-primary">
+            Hablar de Intune
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/evaluacion-inicial-microsoft-365.html" class="service-btn service-btn-secondary">Empezar con evaluación</a>
+        </div>
+        <ul class="service-hero-points">
+          <li>Multiplataforma real — Windows, macOS, iOS, iPadOS y Android</li>
+          <li>Autopilot para que un equipo nuevo se configure solo desde caja</li>
+          <li>BYOD con MAM — protege apps corporativas sin invadir el equipo personal</li>
+        </ul>
       </div>
     </section>
+
     <section class="service-section">
-      <div class="service-container">
-        <h2 class="service-title">Qué aporta Intune</h2>
-        <p class="service-intro">Intune ayuda a centralizar decisiones sobre dispositivos, endurecer configuraciones y reducir desorden operativo.</p>
-        <div class="service-grid">
-          <article class="service-card"><h3>Gestión centralizada</h3><p>Mejora visibilidad sobre equipos, configuraciones y políticas de forma más ordenada.</p></article>
-          <article class="service-card"><h3>Configuración y cumplimiento</h3><p>Permite establecer lineamientos mínimos de seguridad y revisar su adopción.</p></article>
-          <article class="service-card"><h3>Base para crecer</h3><p>Te ayuda a pasar de administración reactiva a una operación más predecible.</p></article>
-        </div>
+      <div class="service-section-eyebrow">El problema</div>
+      <h2 class="service-title">Por qué Intune se queda a medias</h2>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>"Equipos no gestionados conectándose"</h3>
+          <p>Sin Conditional Access integrado, cualquier dispositivo accede a correo y Teams. Compromisos por equipos del empleado, no por la empresa.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>"Cada equipo está configurado distinto"</h3>
+          <p>Sin baseline en Intune, IT pierde días en cada equipo nuevo. Configuraciones inconsistentes son la grieta favorita del atacante.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>"BitLocker, ¿qué BitLocker?"</h3>
+          <p>Equipos sin cifrado, sin clave en custodia, sin política. Un robo o pérdida = información expuesta. Intune lo resuelve por defecto.</p>
+        </article>
       </div>
     </section>
+
     <section class="service-section">
-      <div class="service-container">
-        <h2 class="service-title">Dónde ayudamos</h2>
-        <div class="service-grid">
-          <article class="service-card"><h3>Orden inicial</h3><p>Te ayudamos a definir qué controlar primero y cómo evitar configuraciones dispersas.</p></article>
-          <article class="service-card"><h3>Políticas realistas</h3><p>Buscamos controles útiles para tu empresa, no catálogos de restricciones que nadie sostenga.</p></article>
-          <article class="service-card"><h3>Integración con seguridad</h3><p>Intune tiene más valor cuando se conecta con identidad, cumplimiento y protección de endpoints.</p></article>
+      <div class="service-section-eyebrow">Capacidades</div>
+      <h2 class="service-title">Qué configuramos</h2>
+      <p class="service-intro">Stack base que cubre los escenarios reales de gestión de endpoints en una PYME multiplataforma.</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-card-num">// 01</div>
+          <h3>Inscripción & Autopilot</h3>
+          <p>Autopilot para Windows (entrega zero-touch desde caja), Apple Business Manager para macOS/iOS y Android Enterprise para móviles corporativos.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// 02</div>
+          <h3>Baseline de configuración</h3>
+          <p>Configuration profiles por plataforma: Wi-Fi, VPN, certificados, restricciones, BitLocker/FileVault, settings catalog y security baselines de Microsoft.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// 03</div>
+          <h3>Compliance & Conditional Access</h3>
+          <p>Políticas de cumplimiento (encriptado, OS mínimo, antivirus, jailbreak) conectadas a Conditional Access en Entra ID. No cumple → no entra.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card-num">// 04</div>
+          <h3>App Management & MAM</h3>
+          <p>Distribución de apps corporativas, App Protection Policies para BYOD (corta y pega, copia entre apps, requerir PIN, wipe selectivo).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Entregables</div>
+      <h2 class="service-title">Qué dejamos operando</h2>
+
+      <div class="service-deliverables">
+        <h3>Output del proyecto</h3>
+        <ul>
+          <li>Tenant Intune configurado con baseline para cada plataforma</li>
+          <li>Autopilot listo para Windows, ADE para Apple, Android Enterprise para móviles</li>
+          <li>Políticas de cumplimiento conectadas a Conditional Access</li>
+          <li>BitLocker / FileVault forzado y claves en custodia en Entra ID</li>
+          <li>App Protection Policies para BYOD (correo, Teams, OneDrive)</li>
+          <li>Plan de migración para equipos existentes (anillos de despliegue)</li>
+          <li>Runbook operativo: cómo enrolar, cómo retirar, cómo investigar incumplimiento</li>
+          <li>Documentación de arquitectura y decisiones</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Metodología</div>
+      <h2 class="service-title">Cómo trabajamos</h2>
+
+      <div class="service-steps">
+        <div class="service-step reveal">
+          <span class="service-step-num">01 · Discovery</span>
+          <div>
+            <h3>Inventario y casos de uso reales</h3>
+            <p>Qué plataformas, qué proporción corporativo vs BYOD, qué apps corporativas, qué políticas existentes y qué dolor concreto resuelves.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">02 · Diseño</span>
+          <div>
+            <h3>Arquitectura por plataforma</h3>
+            <p>Estrategia de inscripción por dispositivo, baseline de configuración, política de cumplimiento, integración con Conditional Access. Cada decisión documentada.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">03 · Despliegue por anillos</span>
+          <div>
+            <h3>IT primero, luego pilotos, luego masivo</h3>
+            <p>Empezamos con tu equipo IT (10–20 dispositivos), grupo piloto (50–100), luego roll-out completo. Bugs se atrapan en el anillo correcto.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">04 · Handoff</span>
+          <div>
+            <h3>Tu IT operando con confianza</h3>
+            <p>Runbooks de alta, baja, reset, retirada. Cómo investigar incumplimientos. Cómo agregar apps. Sin dependencia oculta del consultor.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="service-cta-band service-section">
-      <div class="service-container">
-        <h2 class="service-title">Intune funciona mejor cuando responde a una necesidad operativa real</h2>
-        <p class="service-intro">Si tu empresa quiere mejorar control de equipos y reducir exposición sin complejidad innecesaria, podemos ayudarte.</p>
-        <a href="#contacto" class="service-btn service-btn-secondary">Solicitar conversación inicial</a>
+
+    <section class="service-cta-band">
+      <div class="service-cta-banner">
+        <h2>¿Tienes equipos no gestionados accediendo a correo y Teams?</h2>
+        <p>Si tu IT no puede responder cuántos dispositivos conectan, qué cumplen y qué pasaría si uno se pierde — es momento de Intune. Hablemos del alcance que necesitas.</p>
+        <a href="#contacto" class="service-btn service-btn-primary">
+          Conversemos
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </section>
-    <section id="contacto" class="service-section">
-      <div class="service-container">
-        <div class="service-panel">
-          <h2 class="service-title">Cuéntanos tu necesidad</h2>
-          <p>Escríbenos si hoy tienes retos con gestión de dispositivos, políticas o control operativo en Microsoft 365.</p>
-          <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
-            <div><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" autocomplete="name" required /></div>
-            <div><label for="email">Correo electrónico</label><input id="email" type="email" name="email" autocomplete="email" required /></div>
-            <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu entorno o el problema que quieres resolver"></textarea></div>
-            <button type="submit" class="service-btn service-btn-primary">Enviar mensaje</button>
-          </form>
+
+    <section class="service-section" id="faq">
+      <div class="service-section-eyebrow">Preguntas frecuentes</div>
+      <h2 class="service-title">Intune sin marketing</h2>
+
+      <div class="service-faq">
+        <details class="service-faq-item">
+          <summary>¿Qué dispositivos soporta?</summary>
+          <p>Windows 10/11, macOS, iOS, iPadOS y Android (Enterprise, Personal y Dedicado). Soporta tanto equipos corporativos (Autopilot, Apple Business Manager) como BYOD con MAM sin inscripción del dispositivo personal.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Cuánto tarda un despliegue base?</summary>
+          <p>4–6 semanas para baseline de configuración, BitLocker, políticas de cumplimiento e integración con Conditional Access. Autopilot y migración de equipos existentes añaden 2–4 semanas según volumen y plataformas.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Funciona con equipos personales (BYOD)?</summary>
+          <p>Sí. App Protection Policies (MAM) protegen datos corporativos dentro de apps específicas (Outlook, Teams, OneDrive) sin enrolar el dispositivo personal completo. Si el empleado se va, hacemos wipe selectivo solo de los datos corporativos.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Reemplaza a Active Directory o GPOs?</summary>
+          <p>Para gestión moderna de equipos cloud-first, sí. Para entornos híbridos con servidores on-prem y GPOs legacy, conviven. Te ayudamos a definir la estrategia de migración (hybrid join → cloud join → full cloud).</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Qué licencia necesito?</summary>
+          <p>Intune se incluye en Microsoft 365 Business Premium, E3 y E5, así como Enterprise Mobility + Security (EMS). En la evaluación inicial te decimos qué cobertura tienes y si necesitas algo más.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="service-section" id="contacto">
+      <div class="service-contact-grid">
+        <div class="service-contact-left">
+          <div class="service-section-eyebrow" style="text-align:left">Contacto</div>
+          <h2>Cuéntanos tu parque de equipos</h2>
+          <p>Cantidad, plataformas, corporativo vs BYOD, dolor actual. Respuesta con criterio técnico, no con plantilla.</p>
+          <div class="service-contact-meta">
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <span><strong>Correo</strong><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></span>
+            </div>
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span><strong>Respuesta</strong>Horas hábiles · Lun–Vie</span>
+            </div>
+          </div>
         </div>
+
+        <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
+          <div><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required /></div>
+          <div><label for="email">Correo</label><input id="email" type="email" name="email" placeholder="tu@empresa.com" autocomplete="email" required /></div>
+          <div><label for="empresa">Empresa <span style="color:var(--text-mute);font-weight:400;">(opcional)</span></label><input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" /></div>
+          <div><label for="mensaje">¿Qué necesitas resolver?</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Cantidad de dispositivos, plataformas, BYOD vs corporativo, situación actual"></textarea></div>
+          <input type="hidden" name="_subject" value="Solicitud · Intune" />
+          <button type="submit">Enviar mensaje</button>
+          <p class="service-form-note">Al enviar aceptas que usemos tus datos solo para responder esta consulta.</p>
+        </form>
       </div>
     </section>
+
   </main>
+
   <footer class="service-footer">
-    © 2025 TriforSec Solutions.
-    <a href="/">Inicio</a>
-    <a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a>
-    <a href="/blog/">Blog</a>
+    <div class="service-footer-inner">
+      <div class="service-footer-col service-footer-brand">
+        <a href="/" class="service-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>TriforSec Solutions</span>
+        </a>
+        <p>Consultoría de ciberseguridad sobre Microsoft 365 para PYMES. Defender XDR · Purview · Intune · Identity.</p>
+      </div>
+      <div class="service-footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/defender-xdr-pymes.html">Defender XDR</a></li>
+          <li><a href="/purview-pymes.html">Purview</a></li>
+          <li><a href="/intune-pymes.html">Intune</a></li>
+          <li><a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a></li>
+        </ul>
+      </div>
+      <div class="service-footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-footer-bottom">
+      <span>© 2026 TriforSec Solutions. Todos los derechos reservados.</span>
+      <span>Hecho con criterio en México</span>
+    </div>
   </footer>
+
+  <script>
+    (function(){
+      var bar=document.getElementById('topbar');
+      window.addEventListener('scroll',function(){bar.classList.toggle('scrolled',window.scrollY>24);},{passive:true});
+      if('IntersectionObserver' in window){
+        var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});
+      } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); }
+    })();
+  </script>
 </body>
 </html>

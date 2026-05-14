@@ -3,262 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evaluación Inicial de Seguridad en Microsoft 365 | TriforSec Solutions</title>
-  <meta name="description" content="Identifica brechas prioritarias en correo, identidades, endpoints y datos con una evaluación inicial de seguridad en Microsoft 365 para PYMES." />
+  <title>Evaluación inicial de seguridad Microsoft 365 | TriforSec Solutions</title>
+  <meta name="description" content="Auditamos tu tenant Microsoft 365 — correo, identidades, endpoints y datos — y te entregamos hallazgos priorizados con hoja de ruta accionable. Servicio cerrado, sin descubrimiento eterno." />
   <meta name="author" content="TriforSec Solutions" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d14" />
   <link rel="canonical" href="https://triforsecsolutions.com/evaluacion-inicial-microsoft-365.html" />
-  <meta property="og:title" content="Evaluación Inicial de Seguridad en Microsoft 365 | TriforSec Solutions" />
-  <meta property="og:description" content="Una revisión práctica para detectar riesgos prioritarios en Microsoft 365 y definir un plan de acción realista para tu empresa." />
+  <meta property="og:title" content="Evaluación inicial de seguridad Microsoft 365 | TriforSec Solutions" />
+  <meta property="og:description" content="Foto honesta de tu exposición real en correo, identidades, endpoints y datos. Hallazgos priorizados + hoja de ruta accionable." />
   <meta property="og:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/evaluacion-inicial-microsoft-365.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Evaluación Inicial de Seguridad en Microsoft 365 | TriforSec Solutions" />
-  <meta name="twitter:description" content="Detecta las brechas más urgentes en tu entorno Microsoft 365 y recibe una hoja de ruta clara." />
+  <meta name="twitter:title" content="Evaluación inicial Microsoft 365 | TriforSec Solutions" />
+  <meta name="twitter:description" content="Auditamos tu tenant Microsoft 365 y entregamos hallazgos priorizados con hoja de ruta accionable." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/service-pages.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Evaluación Inicial de Seguridad en Microsoft 365",
+    "name": "Evaluación inicial de seguridad en Microsoft 365",
     "provider": {
       "@type": "Organization",
       "name": "TriforSec Solutions",
-      "url": "https://triforsecsolutions.com/"
+      "url": "https://triforsecsolutions.com/",
+      "email": "info@triforsecsolutions.com"
     },
     "serviceType": "Microsoft 365 Security Assessment",
-    "areaServed": "MX",
+    "areaServed": ["MX", "LATAM"],
     "url": "https://triforsecsolutions.com/evaluacion-inicial-microsoft-365.html",
-    "description": "Evaluación práctica para identificar brechas prioritarias de seguridad en Microsoft 365 para PYMES."
+    "description": "Auditoría de seguridad sobre Microsoft 365 con hallazgos priorizados, hoja de ruta y alcance cerrado para PYMES."
   }
   </script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    .skip-link {
-      position: absolute;
-      left: 1rem;
-      top: 0;
-      transform: translateY(-140%);
-      background: #000;
-      color: #fff;
-      padding: 0.75rem 1rem;
-      z-index: 2000;
-      border-radius: 0 0 6px 6px;
-      text-decoration: none;
-    }
-    .skip-link:focus,
-    .skip-link:focus-visible {
-      transform: translateY(0);
-    }
-    .service-hero {
-      background-image:
-        radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('website_assets/hero.jpg');
-      padding-bottom: 5.5rem;
-    }
-    .service-eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.4rem 0.85rem;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      background: rgba(255,255,255,0.08);
-    }
-    .service-hero-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-    .service-hero-points {
-      list-style: none;
-      display: grid;
-      gap: 0.75rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      max-width: 940px;
-      margin: 2rem auto 0;
-      padding: 0;
-    }
-    .service-hero-points li {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 14px;
-      padding: 1rem;
-      backdrop-filter: blur(8px);
-    }
-    .service-grid-3,
-    .service-grid-4 {
-      display: grid;
-      gap: 1.5rem;
-    }
-    .service-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .service-grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .service-checklist ul,
-    .service-steps ol {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 1rem;
-    }
-    .service-checklist li,
-    .service-steps li {
-      background: #fff;
-      border: 1px solid var(--service-border);
-      border-radius: 12px;
-      box-shadow: var(--service-shadow-sm);
-      padding: 1rem 1.1rem;
-      color: var(--service-text-soft);
-    }
-    .service-checklist li strong,
-    .service-steps li strong {
-      color: var(--service-dark);
-    }
-    .service-focus-band {
-      background: #eef5fb;
-    }
-    @media (max-width: 700px) {
-      .service-hero {
-        padding: 5.5rem 1rem 4.5rem;
-      }
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Cuánto dura la evaluación?","acceptedAnswer":{"@type":"Answer","text":"Entre 5 y 10 días hábiles según el tamaño del tenant y la disponibilidad de tu equipo para la sesión de contexto."}},
+      {"@type":"Question","name":"¿Necesito dar acceso de administrador a su consultor?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con rol Global Reader o roles delegados de solo lectura. Si necesitamos algo más, lo justificamos antes y queda documentado."}},
+      {"@type":"Question","name":"¿Qué me llevo al final?","acceptedAnswer":{"@type":"Answer","text":"Un reporte ejecutivo con hallazgos priorizados, un detalle técnico por dominio (correo, identidad, endpoint, datos), una hoja de ruta de 90 días y una sesión de presentación de resultados."}},
+      {"@type":"Question","name":"¿El precio es cerrado?","acceptedAnswer":{"@type":"Answer","text":"Sí. Después de una llamada corta de calificación te enviamos propuesta con alcance, plazo y precio cerrado. Sin sorpresas ni cambios de scope a medio camino."}}
+    ]
+  }
+  </script>
 </head>
 <body class="service-page">
-  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
-  <header class="service-topbar">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="service-topbar" id="topbar">
     <div class="service-topbar-inner">
-      <a href="/" class="service-brand">TriforSec Solutions</a>
+      <a href="/" class="service-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>TriforSec Solutions</span>
+      </a>
       <nav class="service-nav" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/blog/">Blog</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="service-nav-cta">Hablemos</a>
       </nav>
     </div>
   </header>
 
-  <main id="contenido-principal">
+  <main id="main">
+
     <section class="service-hero service-section">
       <div class="service-hero-inner">
-        <span class="service-eyebrow">Servicio principal de entrada</span>
-        <h1>Evaluación inicial de seguridad en Microsoft 365 para detectar riesgos antes de que se conviertan en incidentes</h1>
-        <p>Analizamos configuración, exposición, controles básicos y prioridades de mejora en correo, identidades, dispositivos y datos para ayudarte a tomar decisiones con criterio técnico y sentido de negocio.</p>
+        <span class="service-pill">
+          <span class="service-pill-dot" aria-hidden="true"></span>
+          Servicio de entrada · Alcance y precio cerrado
+        </span>
+        <h1>
+          Foto honesta de tu exposición real en
+          <span class="accent">Microsoft&nbsp;365</span>
+        </h1>
+        <p>Auditamos correo, identidades, endpoints y datos sobre tu tenant. Te entregamos hallazgos priorizados, hoja de ruta accionable y precio cerrado — sin descubrimiento eterno ni propuesta de 80 láminas.</p>
         <div class="service-hero-actions">
-          <a href="#contacto" class="service-btn service-btn-primary">Quiero solicitar la evaluación</a>
+          <a href="#contacto" class="service-btn service-btn-primary">
+            Solicitar evaluación
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
           <a href="#alcance" class="service-btn service-btn-secondary">Ver qué incluye</a>
         </div>
         <ul class="service-hero-points">
-          <li>Enfoque práctico para PYMES y equipos con tiempo limitado</li>
-          <li>Priorización de hallazgos según impacto y urgencia</li>
-          <li>Recomendaciones realistas sobre Microsoft 365 y seguridad</li>
+          <li>Entrega en 5–10 días hábiles, sin reuniones que no aportan</li>
+          <li>Acceso de solo lectura — Global Reader, no admin</li>
+          <li>Reporte ejecutivo + técnico + roadmap de 90 días</li>
+          <li>Precio cerrado, sin scope creep ni horas indefinidas</li>
         </ul>
       </div>
     </section>
 
-    <section id="alcance">
-      <div class="container">
-        <h2 class="section-title">Qué incluye esta evaluación</h2>
-        <p class="section-intro">No es un reporte genérico. Es una revisión inicial orientada a descubrir brechas frecuentes y darte una hoja de ruta clara para saber qué corregir primero.</p>
-        <div class="grid-4">
-          <article class="card">
-            <h3>Correo y colaboración</h3>
-            <p>Revisión de exposición básica en Exchange Online, phishing, autenticación y prácticas de protección del correo.</p>
-          </article>
-          <article class="card">
-            <h3>Identidades y acceso</h3>
-            <p>Validamos elementos clave como MFA, cuentas críticas, higiene de acceso y señales comunes de riesgo.</p>
-          </article>
-          <article class="card">
-            <h3>Endpoints y gestión</h3>
-            <p>Identificamos oportunidades para fortalecer visibilidad, control y protección de dispositivos con Intune y Defender.</p>
-          </article>
-          <article class="card">
-            <h3>Datos y cumplimiento</h3>
-            <p>Buscamos oportunidades iniciales para proteger información sensible y reducir exposición innecesaria.</p>
-          </article>
+    <section class="service-section" id="alcance">
+      <div class="service-section-eyebrow">Alcance</div>
+      <h2 class="service-title">Qué revisamos exactamente</h2>
+      <p class="service-intro">Cuatro vectores donde la mayoría de las PYMES tienen brechas — y donde el atacante invierte la mayor parte de su tiempo.</p>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-card-num">// 01 · Correo</div>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+          </div>
+          <h3>Exchange Online & MDO</h3>
+          <p>Anti-phishing, anti-spoofing, SPF/DKIM/DMARC, Safe Links, Safe Attachments, reglas de transporte sospechosas y exfiltración por reenvíos automáticos.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card-num">// 02 · Identidad</div>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </div>
+          <h3>Entra ID & acceso</h3>
+          <p>MFA real (no opcional), Conditional Access, cuentas privilegiadas, dispositivos heredados, métodos de auth débiles, riesgos por sign-in y consentimientos OAuth abusivos.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card-num">// 03 · Endpoint</div>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M2 20h20M9 18v2h6v-2"/></svg>
+          </div>
+          <h3>Intune & Defender for Endpoint</h3>
+          <p>Inscripción de equipos, políticas de cumplimiento, BitLocker, ASR rules, EDR activo, dispositivos no gestionados conectándose a recursos corporativos.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card-num">// 04 · Datos</div>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+          </div>
+          <h3>Purview & SharePoint</h3>
+          <p>Sensitivity labels existentes (o ausencia), DLP, links externos, sitios sobreexpuestos, datos sensibles fuera de control y configuración de OneDrive corporativo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Entregables</div>
+      <h2 class="service-title">Qué te llevas al final</h2>
+      <p class="service-intro">Documentos accionables, no PowerPoints de relleno. Todo lo que recibe tu equipo:</p>
+
+      <div class="service-deliverables">
+        <h3>Output del servicio</h3>
+        <ul>
+          <li>Reporte ejecutivo de 1 página con postura de seguridad y riesgo agregado</li>
+          <li>Detalle técnico por dominio (correo · identidad · endpoint · datos)</li>
+          <li>Hallazgos clasificados por severidad (crítico · alto · medio · bajo)</li>
+          <li>Hoja de ruta priorizada a 90 días con quick wins y proyectos</li>
+          <li>Estimación de licenciamiento requerido por mejora</li>
+          <li>Sesión de presentación de resultados (60–90 min, dirección + IT)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Cuándo te conviene</div>
+      <h2 class="service-title">Esta evaluación tiene sentido si…</h2>
+
+      <div class="service-checklist">
+        <div class="service-checklist-item"><strong>Ya pagas Microsoft 365</strong>Business Premium, E3 o E5 — pero no sabes qué de eso está realmente activado y protegiéndote.</div>
+        <div class="service-checklist-item"><strong>Recibiste un intento de phishing serio</strong>O sospechas que un buzón fue comprometido. Quieres saber qué tan expuesto está el resto.</div>
+        <div class="service-checklist-item"><strong>Vienen auditorías o requisitos</strong>Cliente, regulador, aseguradora — alguien te pide evidencia de postura de seguridad y no la tienes.</div>
+        <div class="service-checklist-item"><strong>Tu equipo IT está desbordado</strong>Conocen las herramientas pero no tienen tiempo para hacer una revisión seria. Necesitas una mirada externa con criterio.</div>
+        <div class="service-checklist-item"><strong>Quieres invertir bien, no por catálogo</strong>Antes de comprar más licencias o herramientas, necesitas saber qué reduce riesgo real y qué solo agrega complejidad.</div>
+        <div class="service-checklist-item"><strong>Tienes 20–500 empleados</strong>Tamaño donde Microsoft 365 ya es el core operativo y donde un incidente serio paraliza el negocio.</div>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-section-eyebrow">Metodología</div>
+      <h2 class="service-title">Cómo trabajamos</h2>
+      <p class="service-intro">Proceso ordenado en 4 etapas. Sin descubrimiento eterno, sin reuniones que no aportan.</p>
+
+      <div class="service-steps">
+        <div class="service-step reveal">
+          <span class="service-step-num">01 · Día 1</span>
+          <div>
+            <h3>Sesión de contexto (90 min)</h3>
+            <p>Entendemos negocio, criticidad de datos, incidentes recientes, licenciamiento actual y miedos del cliente. Recolectamos accesos de solo lectura.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">02 · Días 2–6</span>
+          <div>
+            <h3>Auditoría técnica sobre el tenant</h3>
+            <p>Trabajamos directamente sobre tu Microsoft 365. Revisamos configuración, controles activos, brechas y evidencia. Sin volcar todo a un Excel — analizamos con criterio.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">03 · Días 7–9</span>
+          <div>
+            <h3>Priorización y documentación</h3>
+            <p>Clasificamos hallazgos por severidad. Construimos hoja de ruta de 90 días con quick wins primero, proyectos después. Validamos viabilidad operativa.</p>
+          </div>
+        </div>
+        <div class="service-step reveal">
+          <span class="service-step-num">04 · Día 10</span>
+          <div>
+            <h3>Presentación de resultados</h3>
+            <p>Sesión de 60–90 min con dirección e IT. Explicamos hallazgos críticos, justificamos prioridades y respondemos preguntas. Te llevas el reporte completo.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="assessment-focus">
-      <div class="container">
-        <h2 class="section-title">Qué problemas ayuda a detectar</h2>
-        <p class="section-intro">Esta evaluación es útil cuando tu empresa ya usa Microsoft 365, pero no tiene claridad sobre qué tan expuesta está o qué controles valen realmente la pena.</p>
-        <div class="grid-3 checklist">
-          <ul>
-            <li><strong>Configuraciones débiles</strong><br>Controles básicos incompletos o inconsistentes.</li>
-            <li><strong>Prioridades poco claras</strong><br>No saber qué atender primero ni qué impacto tiene.</li>
-            <li><strong>Licencias subutilizadas</strong><br>Capacidades disponibles que no se están aprovechando.</li>
-          </ul>
-          <ul>
-            <li><strong>Exceso de complejidad</strong><br>Entornos con decisiones dispersas o sin una dirección concreta.</li>
-            <li><strong>Riesgo en identidades y correo</strong><br>Las áreas más atacadas suelen tener oportunidades rápidas de mejora.</li>
-            <li><strong>Falta de hoja de ruta</strong><br>La seguridad mejora más rápido cuando el camino está ordenado.</li>
-          </ul>
+    <section class="service-cta-band">
+      <div class="service-cta-banner">
+        <h2>Empieza con una llamada de calificación</h2>
+        <p>Conversación corta de 30 minutos para entender tu contexto y decidir si esta evaluación tiene sentido para ti. Si encaja, te enviamos propuesta con alcance, plazo y precio cerrado.</p>
+        <a href="#contacto" class="service-btn service-btn-primary">
+          Agendar llamada de calificación
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="service-section" id="faq">
+      <div class="service-section-eyebrow">Preguntas frecuentes</div>
+      <h2 class="service-title">Lo que más nos preguntan antes de empezar</h2>
+
+      <div class="service-faq">
+        <details class="service-faq-item">
+          <summary>¿Cuánto dura la evaluación?</summary>
+          <p>Entre 5 y 10 días hábiles según el tamaño del tenant y la disponibilidad de tu equipo para la sesión de contexto inicial. Lo definimos en la llamada de calificación.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Necesito dar acceso de administrador?</summary>
+          <p>No. Trabajamos con rol Global Reader o roles delegados de solo lectura. Si necesitamos algo más para un caso específico, lo justificamos antes y queda documentado en el alcance.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Qué pasa si encuentran un incidente activo?</summary>
+          <p>Te avisamos de inmediato y pausamos la evaluación. Definimos contigo respuesta inmediata vs. continuar el assessment. La evaluación no es respuesta a incidentes — si ya tienes uno activo, hablemos antes.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿El precio es cerrado?</summary>
+          <p>Sí. Tras la llamada de calificación te enviamos propuesta con alcance, plazo y precio cerrado. Sin sorpresas ni horas indefinidas ni cambios de scope a medio camino.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Implementan también después de la evaluación?</summary>
+          <p>Sí, pero no es obligatorio. La hoja de ruta es tuya y puedes ejecutarla con tu equipo interno, con otro proveedor o con nosotros. Sin upsell forzado.</p>
+        </details>
+        <details class="service-faq-item">
+          <summary>¿Aplica para empresas fuera de México?</summary>
+          <p>Sí. Operamos para PYMES en México y LATAM. El trabajo es remoto sobre el tenant, así que la geografía no es un bloqueo. Sesiones en español.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="service-section" id="contacto">
+      <div class="service-contact-grid">
+        <div class="service-contact-left">
+          <div class="service-section-eyebrow" style="text-align:left">Solicitar</div>
+          <h2>Cuéntanos tu contexto</h2>
+          <p>Compártenos brevemente tu situación. Te respondemos por correo en horas hábiles para coordinar la llamada de calificación.</p>
+          <div class="service-contact-meta">
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <span><strong>Correo</strong><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></span>
+            </div>
+            <div class="service-contact-meta-item">
+              <span class="service-contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span><strong>Respuesta</strong>Horas hábiles · Lun–Vie</span>
+            </div>
+          </div>
         </div>
+
+        <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
+          <div><label for="nombre">Nombre</label><input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required /></div>
+          <div><label for="email">Correo</label><input id="email" type="email" name="email" placeholder="tu@empresa.com" autocomplete="email" required /></div>
+          <div><label for="empresa">Empresa <span style="color:var(--text-mute);font-weight:400;">(opcional)</span></label><input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" /></div>
+          <div><label for="mensaje">¿Qué te preocupa hoy?</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Tamaño de la empresa, licencias M365 actuales, contexto, urgencia"></textarea></div>
+          <input type="hidden" name="_subject" value="Solicitud · Evaluación inicial M365" />
+          <button type="submit">Solicitar evaluación</button>
+          <p class="service-form-note">Al enviar aceptas que usemos tus datos solo para responder esta consulta.</p>
+        </form>
       </div>
     </section>
 
-    <section class="service-steps service-section">
-      <div class="service-container">
-        <h2 class="service-title">Cómo trabajamos esta evaluación</h2>
-        <p class="service-intro">Un proceso sencillo para pasar de incertidumbre técnica a un plan de acción más claro.</p>
-        <ol>
-          <li><strong>1. Entendemos tu contexto</strong><br>Revisamos tu punto de partida, prioridades del negocio y preocupaciones actuales.</li>
-          <li><strong>2. Evaluamos los controles clave</strong><br>Nos enfocamos en las áreas donde suelen aparecer los riesgos más relevantes.</li>
-          <li><strong>3. Priorizamos hallazgos</strong><br>Te explicamos qué importa más, por qué y qué conviene atacar primero.</li>
-          <li><strong>4. Proponemos una ruta realista</strong><br>Terminamos con recomendaciones prácticas, no con teoría suelta.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="service-cta-band service-section">
-      <div class="service-container">
-        <h2 class="service-title">Si ya tienes Microsoft 365, el momento de revisar tu postura de seguridad es ahora</h2>
-        <p class="service-intro">Una evaluación inicial puede evitar meses de improvisación y ayudarte a invertir tiempo y esfuerzo donde de verdad reduce riesgo.</p>
-        <a href="#contacto" class="service-btn service-btn-secondary">Solicitar evaluación inicial</a>
-      </div>
-    </section>
-
-    <section id="contacto" class="service-section">
-      <div class="service-container">
-        <div class="service-panel">
-          <h2 class="service-title">Solicita tu evaluación inicial</h2>
-          <p>Cuéntanos brevemente tu contexto, tu principal preocupación o lo que quieres revisar en Microsoft 365. Te contactaremos por correo.</p>
-          <form class="service-form" action="https://formspree.io/f/mrbkagdn" method="POST">
-            <div>
-              <label for="nombre">Nombre</label>
-              <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
-            </div>
-            <div>
-              <label for="email">Correo electrónico</label>
-              <input id="email" type="email" name="email" placeholder="Tu correo electrónico" autocomplete="email" required />
-            </div>
-            <div>
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu entorno o tu principal preocupación"></textarea>
-            </div>
-            <button type="submit" class="service-btn service-btn-primary">Enviar solicitud</button>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="service-footer">
-    © 2025 TriforSec Solutions. Todos los derechos reservados.
-    <a href="/">Inicio</a>
-    <a href="/blog/">Blog</a>
+    <div class="service-footer-inner">
+      <div class="service-footer-col service-footer-brand">
+        <a href="/" class="service-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>TriforSec Solutions</span>
+        </a>
+        <p>Consultoría de ciberseguridad sobre Microsoft 365 para PYMES. Defender XDR · Purview · Intune · Identity.</p>
+      </div>
+      <div class="service-footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/defender-xdr-pymes.html">Defender XDR</a></li>
+          <li><a href="/purview-pymes.html">Purview</a></li>
+          <li><a href="/intune-pymes.html">Intune</a></li>
+          <li><a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a></li>
+        </ul>
+      </div>
+      <div class="service-footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-footer-bottom">
+      <span>© 2026 TriforSec Solutions. Todos los derechos reservados.</span>
+      <span>Hecho con criterio en México</span>
+    </div>
   </footer>
+
+  <script>
+    (function(){
+      var bar=document.getElementById('topbar');
+      window.addEventListener('scroll',function(){bar.classList.toggle('scrolled',window.scrollY>24);},{passive:true});
+      if('IntersectionObserver' in window){
+        var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});
+      } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); }
+    })();
+  </script>
 </body>
 </html>

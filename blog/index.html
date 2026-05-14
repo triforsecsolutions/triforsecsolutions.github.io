@@ -1,301 +1,276 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog de Ciberseguridad | TriforSec Solutions</title>
-  <meta name="description" content="Explora guías técnicas y consejos prácticos sobre Microsoft 365, Defender XDR, DNS y más. Mejora la seguridad de tu empresa con TriforSec Solutions." />
-  <meta name="keywords" content="blog ciberseguridad, Microsoft 365, Defender XDR, DNS, seguridad informática, TriforSec Solutions" />
+  <title>Blog técnico de ciberseguridad Microsoft 365 | TriforSec Solutions</title>
+  <meta name="description" content="Guías técnicas sin teoría inflada sobre Microsoft 365, Defender XDR, Intune, Purview y DNS. Contenido pensado para IT y dirección de PYMES." />
   <meta name="author" content="TriforSec Solutions" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d14" />
   <link rel="canonical" href="https://triforsecsolutions.com/blog/" />
-  <meta property="og:title" content="Blog de Ciberseguridad | TriforSec Solutions" />
-  <meta property="og:description" content="Artículos expertos sobre seguridad en la nube, Microsoft Defender, Intune, Purview y más. Protege tu empresa con nuestras guías." />
+  <meta property="og:title" content="Blog técnico de ciberseguridad Microsoft 365 | TriforSec Solutions" />
+  <meta property="og:description" content="Guías técnicas sin teoría inflada sobre Microsoft 365, Defender XDR, Intune, Purview y DNS." />
   <meta property="og:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/blog/" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog de Ciberseguridad | TriforSec Solutions" />
-  <meta name="twitter:description" content="Guías técnicas sobre Microsoft 365, seguridad en la nube y más." />
+  <meta name="twitter:title" content="Blog técnico | TriforSec Solutions" />
+  <meta name="twitter:description" content="Guías técnicas sobre Microsoft 365 y seguridad sin teoría inflada." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/service-pages.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Blog de Ciberseguridad | TriforSec Solutions",
+    "name": "Blog técnico TriforSec Solutions",
     "url": "https://triforsecsolutions.com/blog/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "TriforSec Solutions"
-    }
+    "description": "Guías técnicas sobre Microsoft 365, Defender XDR, Intune, Purview y DNS para PYMES.",
+    "publisher": {"@type":"Organization","name":"TriforSec Solutions","url":"https://triforsecsolutions.com/"}
   }
   </script>
-
   <style>
-    :root {
-      --primary-color: #0078d4;
-      --primary-dark: #005ea6;
-      --dark-color: #003366;
-      --light-bg: #f4f6f9;
-      --card-bg: #ffffff;
-      --card-soft: #f8fbff;
-      --text-color: #1a1a1a;
-      --text-soft: #526174;
-      --border-color: #dbe6f1;
-      --radius: 14px;
-      --transition: 0.3s ease;
-      --shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
-      --shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--light-bg);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-    header {
-      background: rgba(255,255,255,0.8);
-      box-shadow: 0 6px 20px rgba(5, 31, 61, 0.06);
-      backdrop-filter: saturate(180%) blur(14px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-    .logo {
-      font-size: clamp(1.2rem, 1rem + 1vw, 1.65rem);
-      font-weight: 800;
-      color: var(--dark-color);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color var(--transition);
-    }
-    nav a:hover,
-    nav a:focus-visible { color: var(--primary-color); }
-
-    .hero {
-      background:
-        radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('https://triforsecsolutions.com/website_assets/hero.jpg') center/cover no-repeat;
-      color: #fff;
-      padding: 6.5rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.72));
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: clamp(2.1rem, 1.7rem + 2vw, 3.3rem);
-      margin-bottom: 1rem;
-      color: #fff;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-    }
-    .hero p {
-      font-size: clamp(1.02rem, 1rem + 0.45vw, 1.2rem);
-      color: rgba(255,255,255,0.92);
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .blog-intro {
-      max-width: 820px;
-      margin: 0 auto 2rem;
-      text-align: center;
-      color: var(--text-soft);
-      font-size: 1rem;
-    }
-    .posts-grid {
+    .blog-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: var(--container);
+      margin: 0 auto;
     }
-    .post-card {
-      background: linear-gradient(180deg, #ffffff, var(--card-soft));
-      border-radius: var(--radius);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      transition: transform var(--transition), border-color var(--transition);
+      position: relative;
     }
-    .post-card:hover {
-      transform: translateY(-5px);
-      border-color: #b9d7f1;
-      box-shadow: var(--shadow-md);
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
     }
-    .post-card img {
-      width: 100%; height: 160px;
-      object-fit: cover;
+    .blog-card-media {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-3) 100%);
+      position: relative;
+      overflow: hidden;
     }
-    .post-content {
+    .blog-card-media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(79, 158, 255, 0.18), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(0, 212, 255, 0.1), transparent 60%);
+    }
+    .blog-card-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .blog-card-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-family: var(--ff-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      background: rgba(10,13,20,0.7);
+      backdrop-filter: blur(8px);
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-accent);
+      z-index: 1;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .blog-card-body {
+      padding: 1.5rem;
       flex: 1;
-      padding: 1rem 1.25rem;
       display: flex;
       flex-direction: column;
     }
-    .post-content time {
-      font-size: 0.875rem;
-      color: var(--text-soft);
-      margin-bottom: 0.5rem;
-    }
-    .post-content h3 {
-      font-size: 1.25rem;
+    .blog-card-meta {
+      font-family: var(--ff-mono);
+      font-size: 0.78rem;
+      color: var(--text-mute);
       margin-bottom: 0.75rem;
-      color: var(--dark-color);
-      line-height: 1.2;
+      letter-spacing: 0.04em;
     }
-    .post-content h3 a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .post-content h3 a:hover,
-    .post-content h3 a:focus-visible {
-      color: var(--primary-dark);
-    }
-    .post-content p {
-      flex: 1;
-      margin-bottom: 1rem;
-      font-size: 0.97rem;
-      color: var(--text-soft);
-    }
-    .read-more {
-      align-self: flex-start;
-      text-decoration: none;
-      color: var(--primary-color);
+    .blog-card h3 {
+      font-size: 1.2rem;
       font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+    .blog-card h3 a { color: inherit; text-decoration: none; }
+    .blog-card h3 a:hover { color: var(--accent-hover); }
+    .blog-card p {
+      color: var(--text-soft);
+      margin: 0 0 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      flex: 1;
+    }
+    .blog-card-link {
+      align-self: flex-start;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
       display: inline-flex;
       align-items: center;
-      transition: color var(--transition), transform var(--transition);
+      gap: 0.35rem;
     }
-    .read-more:hover,
-    .read-more:focus-visible {
-      color: var(--primary-dark);
-      transform: translateX(2px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.875rem;
-      color: #666;
-      border-top: 1px solid var(--border-color);
-    }
-    footer a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-    footer a:hover,
-    footer a:focus-visible {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-      }
-      nav a {
-        margin-left: 0;
-        margin-right: 1rem;
-      }
-      .hero {
-        padding: 5rem 1rem;
-      }
-    }
+    .blog-card-link svg { width: 14px; height: 14px; transition: transform var(--transition); }
+    .blog-card:hover .blog-card-link svg { transform: translateX(3px); }
   </style>
 </head>
-<body>
-  <header>
-    <div class="nav-container">
-      <a href="/" class="logo">TriforSec Solutions</a>
-      <nav>
+<body class="service-page">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="service-topbar" id="topbar">
+    <div class="service-topbar-inner">
+      <a href="/" class="service-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>TriforSec Solutions</span>
+      </a>
+      <nav class="service-nav" aria-label="Principal">
         <a href="/">Inicio</a>
+        <a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a>
         <a href="/blog/">Blog</a>
+        <a href="#contacto" class="service-nav-cta">Hablemos</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Blog de Ciberseguridad</h1>
-      <p>Guías técnicas, consejos y mejores prácticas para proteger tu empresa con Microsoft 365, Defender XDR, DNS y más.</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <main>
-    <div class="blog-intro">
-      <p>Contenido pensado para dueños de negocio, equipos de TI y responsables de seguridad que necesitan entender mejor los riesgos, tomar decisiones prácticas y avanzar hacia una postura de seguridad más madura en Microsoft 365.</p>
-      <p><a href="/evaluacion-inicial-microsoft-365.html" class="read-more">Si quieres una revisión inicial de tu entorno, solicita una evaluación</a></p>
-    </div>
-    <div class="posts-grid">
-      <!-- Post 1 -->
-      <article class="post-card">
-        <img src="/website_assets/soc.jpg" alt="Seguridad en Microsoft 365 para PYMEs">
-        <div class="post-content">
-          <time datetime="2025-05-01">1 Mayo 2025</time>
-          <h3><a href="/blog/seguridad-microsoft-365-pymes.html">Seguridad en Microsoft 365 para PYMEs</a></h3>
-          <p>Cómo proteger tu negocio con Defender XDR, Intune, Purview y más.</p>
-          <a href="/blog/seguridad-microsoft-365-pymes.html" class="read-more">Leer más</a>
-        </div>
-      </article>
-      <!-- Post 2 -->
-      <article class="post-card">
-        <img src="/website_assets/dns-ilustracion.png" alt="¿Qué es el DNS y para qué sirve?">
-        <div class="post-content">
-          <time datetime="2025-04-15">15 Abril 2025</time>
-          <h3><a href="/blog/dns-explicacion-tecnica.html">¿Qué es el DNS y para qué sirve?</a></h3>
-          <p>Descubre el funcionamiento técnico del DNS, tanto en redes internas como externas, y su impacto en la seguridad de tu empresa.</p>
-          <a href="/blog/dns-explicacion-tecnica.html" class="read-more">Leer más</a>
-        </div>
-      </article>
-    </div>
+    <section class="service-hero service-section">
+      <div class="service-hero-inner">
+        <span class="service-pill">
+          <span class="service-pill-dot" aria-hidden="true"></span>
+          Blog técnico · Microsoft 365 Security
+        </span>
+        <h1>
+          Guías técnicas
+          <span class="accent">sin teoría inflada</span>
+        </h1>
+        <p>Contenido para IT, responsables de seguridad y dirección de PYMES que ya usan Microsoft 365. Lo que aplicamos en proyectos reales — explicado para que tú también puedas aplicarlo.</p>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="blog-list">
+
+        <article class="blog-card reveal">
+          <a href="/blog/seguridad-microsoft-365-pymes.html" aria-hidden="true" tabindex="-1" style="display:block">
+            <div class="blog-card-media">
+              <span class="blog-card-tag">M365 · Security</span>
+            </div>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2025-05-01">01 May 2025</time>
+            </div>
+            <h3><a href="/blog/seguridad-microsoft-365-pymes.html">Seguridad en Microsoft 365 para PYMES</a></h3>
+            <p>Cómo proteger correo, identidades, endpoints y datos en una PYME que ya vive en Microsoft 365 — usando lo que viene con tu licencia, no productos extra.</p>
+            <a href="/blog/seguridad-microsoft-365-pymes.html" class="blog-card-link">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <a href="/blog/dns-explicacion-tecnica.html" aria-hidden="true" tabindex="-1" style="display:block">
+            <div class="blog-card-media">
+              <span class="blog-card-tag">DNS · Infra</span>
+            </div>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <time datetime="2025-04-15">15 Abr 2025</time>
+            </div>
+            <h3><a href="/blog/dns-explicacion-tecnica.html">¿Qué es el DNS y cómo afecta tu seguridad?</a></h3>
+            <p>Funcionamiento técnico del DNS — interno y externo — y por qué entender cómo resuelve nombres tu empresa es la base para cerrar muchos vectores de ataque.</p>
+            <a href="/blog/dns-explicacion-tecnica.html" class="blog-card-link">
+              Leer artículo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="service-cta-band" id="contacto">
+      <div class="service-cta-banner">
+        <h2>¿Quieres una mirada externa con criterio?</h2>
+        <p>Si lo que lees aquí te resulta útil, una evaluación inicial te da una foto honesta del estado real de tu Microsoft 365 — y una hoja de ruta accionable.</p>
+        <a href="/evaluacion-inicial-microsoft-365.html" class="service-btn service-btn-primary">
+          Solicitar evaluación inicial
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    &copy; 2025 TriforSec Solutions. Todos los derechos reservados. info@triforsecsolutions.com
-    <br />
-    <a href="/evaluacion-inicial-microsoft-365.html">Solicitar evaluación inicial</a>
+  <footer class="service-footer">
+    <div class="service-footer-inner">
+      <div class="service-footer-col service-footer-brand">
+        <a href="/" class="service-brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>TriforSec Solutions</span>
+        </a>
+        <p>Consultoría de ciberseguridad sobre Microsoft 365 para PYMES. Defender XDR · Purview · Intune · Identity.</p>
+      </div>
+      <div class="service-footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/defender-xdr-pymes.html">Defender XDR</a></li>
+          <li><a href="/purview-pymes.html">Purview</a></li>
+          <li><a href="/intune-pymes.html">Intune</a></li>
+          <li><a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a></li>
+        </ul>
+      </div>
+      <div class="service-footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-footer-bottom">
+      <span>© 2026 TriforSec Solutions. Todos los derechos reservados.</span>
+      <span>Hecho con criterio en México</span>
+    </div>
   </footer>
+
+  <script>
+    (function(){
+      var bar=document.getElementById('topbar');
+      window.addEventListener('scroll',function(){bar.classList.toggle('scrolled',window.scrollY>24);},{passive:true});
+      if('IntersectionObserver' in window){
+        var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});
+      } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); }
+    })();
+  </script>
 </body>
 </html>
