@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions</title>
-  <meta name="description" content="Servicios de ciberseguridad para PYMES con Microsoft 365, evaluación inicial, Defender XDR, Intune y Purview. Protege correo, identidades, dispositivos y datos sensibles." />
+  <title>Ciberseguridad Microsoft 365 para PYMES | TriforSec Solutions</title>
+  <meta name="description" content="Consultoría de ciberseguridad para PYMES que ya usan Microsoft 365. Reducimos exposición en correo, identidades, dispositivos y datos con Defender XDR, Purview e Intune — sin sobreingeniería." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="TriforSec Solutions" />
+  <meta name="theme-color" content="#0a0d14" />
   <link rel="canonical" href="https://triforsecsolutions.com/" />
-  <meta property="og:title" content="Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions" />
-  <meta property="og:description" content="Servicios de ciberseguridad para PYMES con Microsoft 365, evaluación inicial, Defender XDR, Intune y Purview." />
+  <meta property="og:title" content="Ciberseguridad Microsoft 365 para PYMES | TriforSec Solutions" />
+  <meta property="og:description" content="Consultoría especializada en Microsoft 365: Defender XDR, Purview, Intune e Identity. Reducimos exposición sin complicar la operación." />
   <meta property="og:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <meta property="og:url" content="https://triforsecsolutions.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ciberseguridad para PYMES con Microsoft 365 | TriforSec Solutions" />
-  <meta name="twitter:description" content="Protege correo, identidades, dispositivos y datos sensibles con consultoría especializada en Microsoft 365." />
+  <meta name="twitter:title" content="Ciberseguridad Microsoft 365 para PYMES | TriforSec Solutions" />
+  <meta name="twitter:description" content="Defender XDR, Purview, Intune e Identity implementados con criterio para PYMES sobre Microsoft 365." />
   <meta name="twitter:image" content="https://triforsecsolutions.com/website_assets/hero.jpg" />
   <link rel="icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://triforsecsolutions.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,541 +30,1281 @@
     "name": "TriforSec Solutions",
     "url": "https://triforsecsolutions.com/",
     "email": "info@triforsecsolutions.com",
-    "description": "Servicios de ciberseguridad para PYMES con Microsoft 365, evaluación inicial, Defender XDR, Intune y Purview.",
-    "areaServed": "MX"
+    "description": "Consultoría de ciberseguridad para PYMES sobre Microsoft 365: Defender XDR, Purview, Intune e Identity. Evaluaciones iniciales, implementación con criterio y reducción de exposición sin sobreingeniería.",
+    "areaServed": ["MX", "LATAM"],
+    "serviceType": ["Defender XDR", "Microsoft Purview", "Microsoft Intune", "Defender for Identity", "Microsoft 365 Security Assessment"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Para qué tamaño de empresa está pensado este servicio?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Trabajamos principalmente con PYMES que ya tienen Microsoft 365 (Business Premium, E3 o E5) y necesitan ordenar y fortalecer su entorno sin montar un equipo de seguridad interno completo."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una evaluación inicial?",
+        "acceptedAnswer": {"@type": "Answer", "text": "La evaluación inicial es un servicio de entrada con alcance definido. Te entregamos un diagnóstico priorizado de brechas y una hoja de ruta. Compártenos tu contexto y te enviamos propuesta concreta."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Implementan también o solo asesoran?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ambos. Hacemos el diagnóstico, definimos prioridades e implementamos directamente sobre el tenant — Defender XDR, Purview, Intune e Identity — o trabajamos con tu equipo interno si prefieres acompañamiento."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué licencias de Microsoft 365 necesito para que esto tenga sentido?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Business Premium habilita la mayoría de capacidades base. E5 desbloquea Defender XDR completo, Purview avanzado y Defender for Identity. En la evaluación inicial te decimos qué necesitas según tu riesgo real."}
+      }
+    ]
   }
   </script>
   <style>
     :root {
-      --clr-primary: #0078d4;
-      --clr-primary-dark: #005ea6;
-      --clr-accent: #00a3ff;
-      --clr-bg: #f4f6f9;
-      --clr-card: #ffffff;
-      --clr-card-soft: #f8fbff;
-      --clr-text: #1a1a1a;
-      --clr-text-soft: #465469;
-      --clr-border: #dbe6f1;
-      --ff-base: 'Inter', sans-serif;
-      --fs-base: 1rem;
-      --fs-lg: 1.125rem;
-      --fs-xl: 1.5rem;
-      --shadow-sm: 0 8px 24px rgba(5, 31, 61, 0.06);
-      --shadow-md: 0 16px 40px rgba(5, 31, 61, 0.1);
-      --spacer: 1rem;
-      --transition: 0.3s ease;
+      /* Surfaces */
+      --bg: #0a0d14;
+      --bg-elevated: #0f141d;
+      --surface: #141a26;
+      --surface-2: #1a2230;
+      --surface-3: #212a3a;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --border-accent: rgba(79, 158, 255, 0.35);
+
+      /* Text */
+      --text: #e6edf3;
+      --text-soft: #9ca5b8;
+      --text-mute: #6b7385;
+
+      /* Accents */
+      --accent: #4f9eff;
+      --accent-hover: #6db0ff;
+      --accent-bright: #00d4ff;
+      --accent-deep: #2563eb;
+      --success: #34d399;
+      --warn: #fbbf24;
+
+      /* Effects */
+      --glow: 0 0 60px rgba(79, 158, 255, 0.2);
+      --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+
+      /* Layout */
+      --radius-sm: 8px;
+      --radius: 14px;
+      --radius-lg: 20px;
+      --container: 1180px;
+      --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* Type */
+      --ff-base: 'Inter', system-ui, -apple-system, sans-serif;
+      --ff-mono: 'JetBrains Mono', ui-monospace, monospace;
     }
+
     *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: var(--ff-base);
-      font-size: var(--fs-base);
+      font-size: 16px;
       line-height: 1.6;
-      color: var(--clr-text);
-      background: var(--clr-bg);
-      scroll-behavior: smooth;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
     }
+
+    /* Ambient grid + glow backdrop */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79, 158, 255, 0.15), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 10%, rgba(0, 212, 255, 0.08), transparent 60%),
+        linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at center top, black 30%, transparent 75%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    main, nav, footer { position: relative; z-index: 1; }
+
+    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent-hover); }
+
     .skip-link {
       position: absolute;
-      left: 1rem;
-      top: 0;
+      left: 1rem; top: 0;
       transform: translateY(-140%);
-      background: #000;
+      background: var(--accent);
       color: #fff;
       padding: 0.75rem 1rem;
       z-index: 2000;
-      border-radius: 0 0 6px 6px;
-      text-decoration: none;
+      border-radius: 0 0 8px 8px;
+      font-weight: 600;
     }
-    .skip-link:focus,
-    .skip-link:focus-visible {
-      transform: translateY(0);
-    }
+    .skip-link:focus-visible { transform: translateY(0); color: #fff; }
+
+    /* ====== NAV ====== */
     nav {
-      position: sticky; top: 0; width: 100%;
-      padding: 0.9rem calc(var(--spacer)*2);
-      display: flex; justify-content: space-between; align-items: center;
-      background: rgba(255,255,255,0.78);
-      backdrop-filter: saturate(180%) blur(14px);
-      box-shadow: 0 6px 20px rgba(5, 31, 61, 0.06);
-      transition: background var(--transition), box-shadow var(--transition);
-      z-index: 1000;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(10, 13, 20, 0.72);
+      border-bottom: 1px solid transparent;
+      transition: background var(--transition), border-color var(--transition);
     }
-    nav.scrolled { background: rgba(255,255,255,0.95); }
-    nav h1 {
-      font-size: clamp(1.2rem, 1rem + 1vw, 1.65rem);
+    nav.scrolled {
+      background: rgba(10, 13, 20, 0.88);
+      border-bottom-color: var(--border);
+    }
+    .nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--text);
       font-weight: 800;
-      color: #003366;
-      margin: 0;
-      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
     }
-    nav img {
-      height: 40px;
-      width: 40px;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    .brand-mark {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 24px rgba(79, 158, 255, 0.4);
+      position: relative;
+    }
+    .brand-mark::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1.5px solid rgba(10, 13, 20, 0.85);
+      border-radius: 3px;
+      transform: rotate(45deg);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      font-weight: 500;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.55rem 1rem !important;
+      border-radius: 999px !important;
+      font-weight: 600 !important;
+      box-shadow: 0 6px 24px rgba(79, 158, 255, 0.3);
+    }
+    .nav-cta:hover { background: var(--accent-hover) !important; }
+    @media (max-width: 720px) {
+      .nav-links .nav-link-text { display: none; }
+      .nav-links { gap: 0.2rem; }
     }
 
+    /* ====== HERO ====== */
     .hero {
       position: relative;
+      padding: 7rem 1.5rem 5rem;
       text-align: center;
-      color: #fff;
-      background:
-        radial-gradient(circle at top, rgba(0,163,255,0.18), transparent 35%),
-        url('website_assets/hero.jpg') center/cover no-repeat;
-      padding: calc(var(--spacer)*7) var(--spacer) calc(var(--spacer)*6);
       overflow: hidden;
     }
-    .hero::before {
+    .hero-content {
+      max-width: 880px;
+      margin: 0 auto;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.9rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+    .pill-dot {
+      width: 6px; height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--success);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 1.6rem + 3.2vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      margin: 0 0 1.5rem;
+      color: var(--text);
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+      color: var(--text-soft);
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.55;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 0.85rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      transition: transform var(--transition), background var(--transition), box-shadow var(--transition), border-color var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 28px rgba(79, 158, 255, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(79, 158, 255, 0.5), inset 0 1px 0 rgba(255,255,255,0.25);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+    .btn-ghost:hover {
+      background: var(--surface-2);
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+      color: var(--text);
+    }
+    .btn-arrow {
+      width: 16px; height: 16px;
+      transition: transform var(--transition);
+    }
+    .btn:hover .btn-arrow { transform: translateX(3px); }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hero-trust-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-mute);
+      font-weight: 600;
+    }
+    .hero-trust-items {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .hero-trust-item::before {
+      content: '';
+      width: 4px; height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ====== SECTIONS ====== */
+    .section {
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+    .section-narrow {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      text-align: center;
+      margin: 0 auto 1rem;
+      max-width: 760px;
+      color: var(--text);
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-soft);
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* ====== CAPABILITIES BENTO ====== */
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .bento-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 240px;
+    }
+    .bento-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(4, 18, 37, 0.55), rgba(4, 18, 37, 0.72));
+      background: radial-gradient(circle at top right, rgba(79, 158, 255, 0.08), transparent 50%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
     }
-    .hero-content {
-      position: relative;
+    .bento-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      background: var(--surface-2);
+    }
+    .bento-card:hover::before { opacity: 1; }
+    .bento-large { grid-column: span 4; }
+    .bento-medium { grid-column: span 3; }
+    .bento-small { grid-column: span 2; }
+    @media (max-width: 900px) {
+      .bento { grid-template-columns: repeat(2, 1fr); }
+      .bento-large, .bento-medium, .bento-small { grid-column: span 2; }
+    }
+    .bento-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: var(--surface-3);
+      border: 1px solid var(--border-strong);
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .bento-icon svg { width: 20px; height: 20px; }
+    .bento-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.5rem;
+      color: var(--text);
+    }
+    .bento-card p {
+      color: var(--text-soft);
+      margin: 0 0 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .bento-link {
+      margin-top: auto;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .bento-link svg { width: 14px; height: 14px; transition: transform var(--transition); }
+    .bento-card:hover .bento-link svg { transform: translateX(3px); }
+    .bento-tag {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      color: var(--text-mute);
+      letter-spacing: 0.05em;
+    }
+
+    /* ====== WHY ====== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-card {
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg-elevated) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .why-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+    .why-num {
+      font-family: var(--ff-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .why-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 0.65rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .why-card p {
+      color: var(--text-soft);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* ====== PROCESS ====== */
+    .process-list {
+      max-width: 880px;
+      margin: 0 auto;
+      counter-reset: step;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .process-step-num {
+      font-family: var(--ff-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      padding: 0.25rem 0.7rem;
+      background: rgba(79, 158, 255, 0.08);
+      border: 1px solid var(--border-accent);
+      border-radius: 6px;
+      white-space: nowrap;
+      margin-top: 0.15rem;
+    }
+    .process-step h3 {
+      font-size: 1.15rem;
+      margin: 0 0 0.4rem;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .process-step p {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.96rem;
+    }
+
+    /* ====== METRICS ROW ====== */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      max-width: var(--container);
+      margin: 0 auto;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+    .metric {
+      background: var(--bg-elevated);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .metric-value {
+      font-size: clamp(1.75rem, 1.3rem + 1.2vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    /* ====== FAQ ====== */
+    .faq-list {
       max-width: 820px;
       margin: 0 auto;
-      animation: fadeInUp 1s ease both;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 1.7rem + 2vw, 3.6rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-    }
-    .hero p {
-      font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
-      margin: 0 auto calc(var(--spacer)*2);
-      max-width: 760px;
-      color: rgba(255,255,255,0.92);
-    }
-    .cta-button {
-      display: inline-block;
-      background: var(--clr-primary);
-      color: #fff;
-      padding: 0.9rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 12px 30px rgba(0, 120, 212, 0.25);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-    .cta-button:hover,
-    .cta-button:focus-visible {
-      background: var(--clr-primary-dark);
-      transform: translateY(-2px);
-      outline: none;
-    }
-    .cta-button-secondary {
-      background: #fff;
-      color: #003366;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-    .cta-button-secondary:hover,
-    .cta-button-secondary:focus-visible {
-      background: #eef5fb;
-      color: #003366;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .services {
-      background: var(--clr-bg);
-      padding: calc(var(--spacer)*4) var(--spacer);
-      text-align: center;
-    }
-    .section-intro {
-      max-width: 760px;
-      margin: 0 auto 2rem;
-      color: var(--clr-text-soft);
-      font-size: 1.05rem;
-    }
-    .trust-strip,
-    .why-us,
-    .process,
-    .cta-section {
-      padding: calc(var(--spacer)*4) var(--spacer);
-    }
-    .trust-strip {
-      background: #eef5fb;
-      text-align: center;
-    }
-    .trust-strip ul,
-    .process ol {
-      max-width: 1000px;
-      margin: 1.5rem auto 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .trust-strip li,
-    .process li {
-      background: #fff;
-      padding: 1.1rem;
-      border: 1px solid var(--clr-border);
-      border-radius: 12px;
-      box-shadow: var(--shadow-sm);
-    }
-    .why-us {
-      background: var(--clr-card);
-    }
-    .section-title {
-      text-align: center;
-      color: #003366;
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.3rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-    .why-us-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-    .why-us-card {
-      background: linear-gradient(180deg, #ffffff, var(--clr-card-soft));
-      border: 1px solid var(--clr-border);
-      border-radius: 14px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .why-us-card h3 {
-      margin-top: 0;
-      color: #003366;
-    }
-    .process {
-      background: var(--clr-bg);
-      text-align: center;
-    }
-    .cta-section {
-      background: linear-gradient(135deg, #003366, #0078d4);
-      color: #fff;
-      text-align: center;
-    }
-    .cta-section p {
-      max-width: 720px;
-      margin: 1rem auto 1.5rem;
-    }
-    .services h2 {
-      font-size: 2rem;
-      color: #003366;
-      margin-bottom: calc(var(--spacer)*2);
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: calc(var(--spacer)*2);
-    }
-    .card {
-      background: linear-gradient(180deg, #ffffff, var(--clr-card-soft));
-      border: 1px solid var(--clr-border);
-      border-radius: 14px;
-      padding: calc(var(--spacer)*2);
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
       display: flex;
       flex-direction: column;
+      gap: 0.75rem;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #b9d7f1;
-      box-shadow: var(--shadow-md);
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition);
     }
-    .card svg {
-      width: 48px;
-      height: 48px;
-      margin-bottom: var(--spacer);
-      color: var(--clr-primary);
+    .faq-item[open] { border-color: var(--border-accent); }
+    .faq-item summary {
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.02rem;
     }
-    .card h3 {
-      font-size: var(--fs-lg);
-      margin-bottom: 0.5rem;
-      color: #003366;
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent);
+      transition: transform var(--transition);
+      line-height: 1;
     }
-    .card p {
-      font-size: var(--fs-base);
-      color: #333;
-      margin-bottom: var(--spacer);
-    }
-    .card .cta-button {
-      font-size: var(--fs-base);
-      margin-top: auto;
-      align-self: flex-start;
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      padding: 0 1.5rem 1.25rem;
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.96rem;
+      line-height: 1.6;
     }
 
-    .contact-section {
-      background: var(--clr-card);
-      padding: calc(var(--spacer)*4) var(--spacer) calc(var(--spacer)*5);
+    /* ====== CTA BANNER ====== */
+    .cta-banner {
+      position: relative;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--surface) 0%, var(--bg-elevated) 100%);
+      border: 1px solid var(--border-strong);
+      overflow: hidden;
       text-align: center;
     }
-    .contact-section h2 {
-      font-size: 2rem;
-      color: #003366;
-      margin-bottom: calc(var(--spacer)*2);
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(79, 158, 255, 0.18), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.12), transparent 50%);
+      pointer-events: none;
     }
-    .contact-section form {
-      max-width: 620px;
-      margin: 0 auto;
+    .cta-banner > * { position: relative; }
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+    .cta-banner p {
+      color: var(--text-soft);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.02rem;
+    }
+
+    /* ====== CONTACT ====== */
+    .contact-grid {
       display: grid;
-      gap: var(--spacer);
-      text-align: left;
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 16px;
-      border: 1px solid var(--clr-border);
-      box-shadow: var(--shadow-sm);
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      max-width: 1040px;
+      margin: 0 auto;
+      align-items: start;
     }
-    .form-helper {
-      margin: -0.25rem auto 1.5rem;
-      max-width: 620px;
-      color: var(--clr-text-soft);
-      font-size: 0.98rem;
+    @media (max-width: 820px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
-    .form-group label {
+    .contact-left h2 {
+      font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 1rem;
+    }
+    .contact-left p {
+      color: var(--text-soft);
+      margin: 0 0 2rem;
+      font-size: 1rem;
+    }
+    .contact-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-meta-item {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      color: var(--text-soft);
+      font-size: 0.94rem;
+    }
+    .contact-meta-icon {
+      width: 36px; height: 36px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+    }
+    .contact-meta-icon svg { width: 16px; height: 16px; }
+    .contact-meta-item strong {
       display: block;
-      margin-bottom: 0.5rem;
+      color: var(--text);
       font-weight: 600;
-      color: #003366;
+      margin-bottom: 0.1rem;
     }
-    .contact-section input,
-    .contact-section textarea {
+    form.contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .form-row {
+      display: grid;
+      gap: 0.4rem;
+    }
+    .form-row label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .form-row input,
+    .form-row textarea {
       width: 100%;
-      padding: var(--spacer);
-      border: 1px solid #c8d8e8;
-      border-radius: 10px;
-      font-size: var(--fs-base);
-      background: #fbfdff;
-      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      padding: 0.8rem 1rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+      resize: vertical;
     }
-    .contact-section input:focus,
-    .contact-section textarea:focus {
-      border-color: var(--clr-primary);
-      box-shadow: 0 0 0 4px rgba(0, 120, 212, 0.14);
-      background: #fff;
+    .form-row input::placeholder,
+    .form-row textarea::placeholder { color: var(--text-mute); }
+    .form-row input:focus,
+    .form-row textarea:focus {
       outline: none;
+      border-color: var(--accent);
+      background: var(--bg);
+      box-shadow: 0 0 0 4px rgba(79, 158, 255, 0.12);
     }
-    .contact-section button {
-      background: var(--clr-primary);
+    .form-submit {
+      background: var(--accent);
       color: #fff;
       border: none;
-      padding: var(--spacer);
-      border-radius: 5px;
-      font-size: var(--fs-base);
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
       font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background var(--transition), transform var(--transition);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 8px 24px rgba(79, 158, 255, 0.3);
+      font-family: inherit;
     }
-    .contact-section button:hover,
-    .contact-section button:focus-visible {
-      background: var(--clr-primary-dark);
+    .form-submit:hover {
+      background: var(--accent-hover);
       transform: translateY(-2px);
-      outline: none;
+      box-shadow: 0 12px 32px rgba(79, 158, 255, 0.45);
+    }
+    .form-note {
+      font-size: 0.82rem;
+      color: var(--text-mute);
+      margin: 0;
     }
 
+    /* ====== FOOTER ====== */
     footer {
-      text-align: center;
-      padding: calc(var(--spacer)*2);
-      background: var(--clr-bg);
-      color: #555;
-      font-size: 0.875rem;
-      border-top: 1px solid var(--clr-border);
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 2rem;
     }
-    footer a {
-      color: var(--clr-primary);
-      text-decoration: none;
-      margin-left: 0.5rem;
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    @media (max-width: 720px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+    .footer-col h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-mute);
+      margin: 0 0 1rem;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer-col a {
+      color: var(--text-soft);
+      font-size: 0.92rem;
       transition: color var(--transition);
     }
-    footer a:hover {
-      text-decoration: underline;
+    .footer-col a:hover { color: var(--text); }
+    .footer-brand p {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      margin: 0.75rem 0 0;
+      max-width: 360px;
+      line-height: 1.55;
+    }
+    .footer-bottom {
+      max-width: var(--container);
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--text-mute);
+      font-size: 0.85rem;
+    }
+
+    /* ====== UTILITIES ====== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Focus states */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
     @media (max-width: 600px) {
-      nav {
-        padding: 0.85rem 1rem;
-      }
-      nav h1 {
-        max-width: calc(100% - 56px);
-      }
-      .hero h1 { font-size: 2rem; }
-      .services h2, .contact-section h2 { font-size: 1.75rem; }
-      .trust-strip,
-      .why-us,
-      .process,
-      .cta-section,
-      .services,
-      .contact-section {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .contact-section form {
-        padding: 1rem;
-      }
-      .form-helper {
-        margin-bottom: 1rem;
-      }
+      .section { padding: 4rem 1.25rem; }
+      .hero { padding: 5rem 1.25rem 3.5rem; }
+      .cta-banner { padding: 2.5rem 1.5rem; }
+      form.contact-form { padding: 1.5rem; }
+      .hero-trust { gap: 1.25rem; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <nav id="navbar" aria-label="Principal">
-    <h1>TriforSec Solutions</h1>
-    <img src="favicon.ico" alt="Logo TriforSec" />
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>TriforSec Solutions</span>
+      </a>
+      <div class="nav-links">
+        <a href="#capabilities" class="nav-link-text">Servicios</a>
+        <a href="#process" class="nav-link-text">Cómo trabajamos</a>
+        <a href="/blog/" class="nav-link-text">Blog</a>
+        <a href="#contacto" class="nav-cta">Hablemos</a>
+      </div>
+    </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Servicios de ciberseguridad para PYMES que necesitan ordenar y fortalecer Microsoft 365</h1>
-      <p>Ayudamos a pequeñas y medianas empresas a reducir exposición en correo, identidades, dispositivos y datos con una estrategia práctica sobre Microsoft 365, Defender, Intune y Purview.</p>
-      <a href="/evaluacion-inicial-microsoft-365.html" class="cta-button">Solicita una evaluación inicial</a>
-    </div>
-  </header>
+  <main id="main">
 
-  <main id="contenido-principal">
-  <section class="trust-strip" aria-labelledby="confianza-operativa">
-    <h2 id="confianza-operativa">En qué te ayudamos</h2>
-    <div class="section-intro">
-      <p>Nos enfocamos en reducir riesgo real, cerrar brechas comunes de configuración y ayudarte a tomar decisiones más seguras sin complicar la operación del negocio.</p>
-    </div>
-    <ul>
-      <li>Evaluación inicial de seguridad en Microsoft 365</li>
-      <li>Protección de correo, identidades, endpoints y datos</li>
-      <li>Servicios especializados sobre Defender, Intune y Purview</li>
-      <li>Recomendaciones prácticas, sin humo ni sobreingeniería</li>
-    </ul>
-  </section>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-content">
+        <span class="pill">
+          <span class="pill-dot" aria-hidden="true"></span>
+          Microsoft 365 Security · Defender XDR · Purview · Intune
+        </span>
+        <h1>
+          Ciberseguridad para PYMES que ya viven en
+          <span class="accent">Microsoft&nbsp;365</span>
+        </h1>
+        <p class="hero-sub">
+          Reducimos exposición en correo, identidades, dispositivos y datos sin armar un equipo interno de seguridad. Diagnóstico claro, implementación con criterio y una hoja de ruta que tu operación sí puede sostener.
+        </p>
+        <div class="hero-ctas">
+          <a href="/evaluacion-inicial-microsoft-365.html" class="btn btn-primary">
+            Solicitar evaluación inicial
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#capabilities" class="btn btn-ghost">Ver servicios</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-label">Stack que dominamos</span>
+          <div class="hero-trust-items">
+            <span class="hero-trust-item">Defender XDR</span>
+            <span class="hero-trust-item">Purview</span>
+            <span class="hero-trust-item">Intune</span>
+            <span class="hero-trust-item">Entra ID</span>
+            <span class="hero-trust-item">Defender for Identity</span>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <section class="services" aria-labelledby="servicios-principales">
-    <h2 id="servicios-principales">Servicios principales</h2>
-    <div class="section-intro">
-      <p>Servicios orientados a entornos empresariales que necesitan mejorar seguridad, visibilidad y control sin montar una estructura interna compleja.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-        <h3>Defender XDR</h3>
-        <p>Detección y respuesta extendida para amenazas avanzadas.</p>
-        <a href="/defender-xdr-pymes.html" class="cta-button">Ver servicio</a>
-      </div>
+    <!-- CAPABILITIES -->
+    <section class="section" id="capabilities" aria-labelledby="cap-title">
+      <div class="section-eyebrow">Capacidades</div>
+      <h2 class="section-title" id="cap-title">Servicios diseñados para PYMES con Microsoft 365 sin sobreingeniería</h2>
+      <p class="section-sub">No vendemos herramientas. Activamos las capacidades que ya pagaste y las dejamos operando con criterio sobre tu entorno real.</p>
 
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8h8v8H8V8z"/></svg>
-        <h3>Purview</h3>
-        <p>Protección y cumplimiento de información sensible.</p>
-        <a href="/purview-pymes.html" class="cta-button">Ver servicio</a>
-      </div>
+      <div class="bento">
 
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="7" y="2" width="10" height="20" rx="2" ry="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18h2"/></svg>
-        <h3>Intune</h3>
-        <p>Gestión centralizada de dispositivos y aplicaciones.</p>
-        <a href="/intune-pymes.html" class="cta-button">Ver servicio</a>
-      </div>
+        <article class="bento-card bento-large reveal">
+          <span class="bento-tag">01</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Defender XDR</h3>
+          <p>Detección y respuesta extendida sobre correo, identidades y endpoints. Correlación real de señales, menos ruido, mejor contexto al investigar incidentes.</p>
+          <a href="/defender-xdr-pymes.html" class="bento-link">
+            Ver servicio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
 
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        <h3>Defender for Identity</h3>
-        <p>Detección de amenazas en entornos híbridos AD.</p>
-      </div>
+        <article class="bento-card bento-medium reveal">
+          <span class="bento-tag">02</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <h3>Purview</h3>
+          <p>Sensitivity labels, DLP y protección de información sensible alineada a tu negocio — no a una plantilla genérica.</p>
+          <a href="/purview-pymes.html" class="bento-link">
+            Ver servicio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
 
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h2m16 0h2M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
-        <h3>Evaluación inicial</h3>
-        <p>Servicio de entrada para identificar brechas prioritarias, ordenar la conversación y definir una ruta de seguridad realista.</p>
-        <a href="/evaluacion-inicial-microsoft-365.html" class="cta-button">Ver servicio</a>
-      </div>
+        <article class="bento-card bento-medium reveal">
+          <span class="bento-tag">03</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>Intune</h3>
+          <p>Gestión centralizada de dispositivos y políticas de cumplimiento. Endpoints que sí pueden conectarse — y los que no, fuera.</p>
+          <a href="/intune-pymes.html" class="bento-link">
+            Ver servicio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
 
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <h3>Blog de Seguridad</h3>
-        <p>Guías y artículos para proteger tu empresa.</p>
-        <a href="/blog/" class="cta-button">Leer artículo</a>
-      </div>
-    </div>
-  </section>
+        <article class="bento-card bento-small reveal">
+          <span class="bento-tag">04</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </div>
+          <h3>Defender for Identity</h3>
+          <p>Detección de comportamiento anómalo en AD híbrido y Entra ID.</p>
+        </article>
 
-  <section class="why-us" aria-labelledby="por-que-triforsec">
-    <h2 id="por-que-triforsec" class="section-title">Por qué trabajar con TriforSec Solutions</h2>
-    <div class="section-intro">
-      <p>La prioridad no es venderte herramientas por vender, sino ayudarte a reducir exposición y ordenar tu entorno de seguridad con criterio técnico y sentido operativo.</p>
-    </div>
-    <div class="why-us-grid">
-      <div class="why-us-card">
-        <h3>Enfoque práctico</h3>
-        <p>Traducimos capacidades complejas de Microsoft en decisiones implementables para tu negocio.</p>
-      </div>
-      <div class="why-us-card">
-        <h3>Orientado a riesgo</h3>
-        <p>Priorizamos lo que más reduce superficie de ataque y mejora la protección real del entorno.</p>
-      </div>
-      <div class="why-us-card">
-        <h3>Sin complejidad innecesaria</h3>
-        <p>Evitamos sobrecargar a tu empresa con controles costosos o difíciles de operar cuando no aportan valor inmediato.</p>
-      </div>
-    </div>
-  </section>
+        <article class="bento-card bento-small reveal">
+          <span class="bento-tag">05</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Evaluación inicial</h3>
+          <p>Diagnóstico priorizado del tenant: brechas, prioridades, ruta realista.</p>
+          <a href="/evaluacion-inicial-microsoft-365.html" class="bento-link">
+            Empezar aquí
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
 
-  <section class="process" aria-labelledby="como-trabajamos">
-    <h2 id="como-trabajamos" class="section-title">Cómo trabajamos</h2>
-    <div class="section-intro">
-      <p>Un proceso simple para pasar de visibilidad limitada a una hoja de ruta clara de seguridad.</p>
-    </div>
-    <ol>
-      <li><strong>1. Diagnóstico</strong><br>Entendemos tu entorno actual y los riesgos más urgentes.</li>
-      <li><strong>2. Priorización</strong><br>Definimos qué corregir primero según impacto y esfuerzo.</li>
-      <li><strong>3. Implementación</strong><br>Aplicamos mejoras seguras y realistas sobre Microsoft 365.</li>
-      <li><strong>4. Continuidad</strong><br>Dejamos recomendaciones claras para mantener el avance.</li>
-    </ol>
-  </section>
+        <article class="bento-card bento-small reveal">
+          <span class="bento-tag">06</span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Blog técnico</h3>
+          <p>Guías reales sobre seguridad Microsoft 365 — sin teoría inflada.</p>
+          <a href="/blog/" class="bento-link">
+            Leer blog
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
 
-  <section class="cta-section" aria-labelledby="cta-principal-final">
-    <h2 id="cta-principal-final">Da el siguiente paso con una revisión inicial</h2>
-    <p>Si tu empresa ya usa Microsoft 365 pero no tienes claridad sobre qué tan protegida está, una evaluación inicial puede ayudarte a detectar brechas y definir prioridades sin improvisación.</p>
-    <a href="/evaluacion-inicial-microsoft-365.html" class="cta-button cta-button-secondary">Quiero una evaluación inicial</a>
-  </section>
+      </div>
+    </section>
 
-  <section class="contact-section" id="formulario" aria-labelledby="titulo-contacto">
-    <h2 id="titulo-contacto">Contáctanos</h2>
-    <p class="form-helper">Si prefieres, también puedes pedir directamente una <a href="/evaluacion-inicial-microsoft-365.html">evaluación inicial de seguridad en Microsoft 365</a>. Te responderemos por correo.</p>
-    <form action="https://formspree.io/f/mrbkagdn" method="POST">
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+    <!-- METRICS / TRUST -->
+    <section class="section" aria-labelledby="impact-title">
+      <h2 id="impact-title" class="visually-hidden" style="position:absolute;left:-9999px;">Impacto de un entorno bien configurado</h2>
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-value">4</div>
+          <div class="metric-label">Vectores cubiertos<br>correo · identidad · endpoint · datos</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">M365</div>
+          <div class="metric-label">Especialización exclusiva en stack Microsoft</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">PYME</div>
+          <div class="metric-label">Enfoque ajustado al tamaño y operación real</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">0</div>
+          <div class="metric-label">Herramientas extras<br>activamos lo que ya pagaste</div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input id="email" type="email" name="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="section-eyebrow">Por qué TriforSec</div>
+      <h2 class="section-title" id="why-title">Consultoría con criterio técnico, no checklists pegadas</h2>
+      <p class="section-sub">Trabajamos con PYMES que ya tienen Microsoft 365 y necesitan ordenar lo que está activado, cerrar brechas reales y dejar el entorno operable.</p>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">// 01</div>
+          <h3>Enfoque práctico</h3>
+          <p>Traducimos capacidades complejas de Microsoft a decisiones que se pueden implementar el lunes — no a un PowerPoint de 80 láminas.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">// 02</div>
+          <h3>Priorizado por riesgo</h3>
+          <p>Atacamos primero lo que más reduce superficie de ataque. No vendemos por catálogo, vendemos por exposición real del entorno.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">// 03</div>
+          <h3>Sin sobreingeniería</h3>
+          <p>Si una capacidad no aporta a tu PYME hoy, no la implementamos. La complejidad innecesaria se paga después en operación.</p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu necesidad, problema o proyecto"></textarea>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="section-eyebrow">Metodología</div>
+      <h2 class="section-title" id="process-title">De visibilidad limitada a hoja de ruta clara en 4 pasos</h2>
+      <p class="section-sub">Un proceso ordenado para entender tu entorno, priorizar lo que importa e implementar sin romper la operación.</p>
+
+      <div class="process-list">
+        <div class="process-step reveal">
+          <span class="process-step-num">01 · Diagnóstico</span>
+          <div>
+            <h3>Mapeamos tu tenant real, no el ideal</h3>
+            <p>Revisamos Secure Score, configuración activa, brechas críticas, licenciamiento y postura general del entorno Microsoft 365.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-step-num">02 · Priorización</span>
+          <div>
+            <h3>Definimos qué corregir primero</h3>
+            <p>Cruzamos impacto vs. esfuerzo. Te entregamos un plan donde cada acción tiene justificación técnica y un resultado esperado.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-step-num">03 · Implementación</span>
+          <div>
+            <h3>Aplicamos sobre el tenant, no en una pizarra</h3>
+            <p>Configuramos Defender, Purview, Intune e Identity con criterio operativo. Cada cambio probado, documentado y reversible.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-step-num">04 · Continuidad</span>
+          <div>
+            <h3>Dejamos el entorno operable</h3>
+            <p>Documentación clara, recomendaciones para sostener el avance y handoff a tu equipo. Sin dependencia oculta de consultor.</p>
+          </div>
+        </div>
       </div>
-      <button type="submit">Solicitar contacto</button>
-    </form>
-  </section>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section">
+      <div class="cta-banner">
+        <h2>Empieza con una evaluación inicial</h2>
+        <p>Si ya pagas Microsoft 365 pero no tienes claridad sobre qué tan protegido está, una evaluación de entrada te da una foto honesta del tenant y las prioridades reales — sin improvisación.</p>
+        <a href="/evaluacion-inicial-microsoft-365.html" class="btn btn-primary">
+          Quiero la evaluación inicial
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-eyebrow">Preguntas frecuentes</div>
+      <h2 class="section-title" id="faq-title">Lo que más nos preguntan antes de empezar</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Para qué tamaño de empresa está pensado este servicio?</summary>
+          <p>Trabajamos principalmente con PYMES que ya tienen Microsoft 365 (Business Premium, E3 o E5) y necesitan ordenar y fortalecer su entorno sin montar un equipo de seguridad interno completo. Si tienes entre 20 y 500 empleados con M365 productivo, encajas.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto cuesta una evaluación inicial?</summary>
+          <p>Es un servicio de entrada con alcance definido y precio cerrado. Te entregamos diagnóstico priorizado de brechas y una hoja de ruta accionable. Compártenos tu contexto y te enviamos propuesta concreta — sin descubrimiento eterno.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Implementan o solo asesoran?</summary>
+          <p>Ambos. Hacemos el diagnóstico, definimos prioridades e implementamos directamente sobre el tenant — Defender XDR, Purview, Intune e Identity — o trabajamos en modo acompañamiento si tu equipo interno ejecuta. Tú decides el modelo.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué licencias Microsoft 365 necesito para que esto tenga sentido?</summary>
+          <p>Business Premium habilita la mayoría de capacidades base. E5 desbloquea Defender XDR completo, Purview avanzado y Defender for Identity. En la evaluación inicial te decimos qué necesitas según tu riesgo real — sin upsell forzado.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Trabajan fuera de México?</summary>
+          <p>Sí. Operamos para PYMES en México y LATAM. El trabajo es remoto sobre el tenant, así que la geografía no es un bloqueo. Sesiones en español, documentación en español, criterio técnico universal.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-eyebrow" style="text-align:left">Contacto</div>
+          <h2 id="contact-title">Cuéntanos qué te preocupa hoy</h2>
+          <p>Si tu entorno Microsoft 365 te genera dudas — exposición, alertas, configuración, postura, auditoría — escríbenos. Te respondemos con criterio técnico, no con un PDF comercial.</p>
+          <div class="contact-meta">
+            <div class="contact-meta-item">
+              <span class="contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <span>
+                <strong>Correo</strong>
+                <a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a>
+              </span>
+            </div>
+            <div class="contact-meta-item">
+              <span class="contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span>
+                <strong>Respuesta</strong>
+                Te contestamos en horas hábiles · Lun–Vie
+              </span>
+            </div>
+            <div class="contact-meta-item">
+              <span class="contact-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>
+                <strong>Operamos</strong>
+                México · LATAM · Remoto
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mrbkagdn" method="POST">
+          <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Correo</label>
+            <input id="email" type="email" name="email" placeholder="tu@empresa.com" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <label for="empresa">Empresa <span style="color:var(--text-mute);font-weight:400;">(opcional)</span></label>
+            <input id="empresa" type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" />
+          </div>
+          <div class="form-row">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos brevemente qué necesitas — entorno actual, dolor, urgencia"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar mensaje</button>
+          <p class="form-note">Al enviar aceptas que usemos tus datos solo para responder esta consulta.</p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    © 2025 TriforSec Solutions. Todos los derechos reservados. info@triforsecsolutions.com
-    <br />
-    <a href="/blog/">Ir al blog</a>
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>TriforSec Solutions</span>
+        </a>
+        <p>Consultoría de ciberseguridad sobre Microsoft 365 para PYMES. Defender XDR · Purview · Intune · Identity. Sin sobreingeniería.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/defender-xdr-pymes.html">Defender XDR</a></li>
+          <li><a href="/purview-pymes.html">Purview</a></li>
+          <li><a href="/intune-pymes.html">Intune</a></li>
+          <li><a href="/evaluacion-inicial-microsoft-365.html">Evaluación inicial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="mailto:info@triforsecsolutions.com">info@triforsecsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TriforSec Solutions. Todos los derechos reservados.</span>
+      <span>Hecho con criterio en México</span>
+    </div>
   </footer>
 
   <script>
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    (function () {
+      const nav = document.getElementById('navbar');
+      let lastY = 0;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        nav.classList.toggle('scrolled', y > 24);
+        lastY = y;
+      }, { passive: true });
+
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+      }
+    })();
   </script>
 </body>
 </html>
