@@ -461,9 +461,68 @@
     .bento-large { grid-column: span 4; }
     .bento-medium { grid-column: span 3; }
     .bento-small { grid-column: span 2; }
+    .bento-feature {
+      grid-column: span 2;
+      background: linear-gradient(160deg, rgba(79, 158, 255, 0.15) 0%, rgba(0, 212, 255, 0.06) 50%, var(--surface) 100%);
+      border-color: var(--border-accent);
+    }
+    .bento-feature::before {
+      background: radial-gradient(circle at top right, rgba(79, 158, 255, 0.18), transparent 60%) !important;
+      opacity: 1 !important;
+    }
+    .bento-feature:hover {
+      border-color: var(--accent);
+      background: linear-gradient(160deg, rgba(79, 158, 255, 0.22) 0%, rgba(0, 212, 255, 0.1) 50%, var(--surface-2) 100%);
+    }
+    .bento-feature .bento-icon {
+      background: rgba(79, 158, 255, 0.18);
+      border-color: var(--border-accent);
+      color: var(--accent-bright);
+    }
+    .bento-feature .bento-tag { color: var(--accent); }
+    .bento-feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--ff-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border-accent);
+      border-radius: 999px;
+      background: rgba(10, 13, 20, 0.5);
+      margin-bottom: 0.85rem;
+      align-self: flex-start;
+    }
+    .bento-feature-cta {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(79, 158, 255, 0.35);
+      transition: background var(--transition), transform var(--transition);
+      align-self: flex-start;
+    }
+    .bento-feature-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+    .bento-feature-cta svg { width: 14px; height: 14px; transition: transform var(--transition); }
+    .bento-feature-cta:hover svg { transform: translateX(3px); }
     @media (max-width: 900px) {
       .bento { grid-template-columns: repeat(2, 1fr); }
-      .bento-large, .bento-medium, .bento-small { grid-column: span 2; }
+      .bento-large, .bento-medium, .bento-small, .bento-feature { grid-column: span 2; }
     }
     .bento-icon {
       width: 42px; height: 42px;
@@ -981,25 +1040,41 @@
       <div class="bento">
 
         <article class="bento-card bento-large reveal">
-          <span class="bento-tag">01</span>
+          <span class="bento-tag">SERVICIO · 01</span>
           <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
           <h3>Defender XDR</h3>
-          <p>Detección y respuesta extendida sobre correo, identidades y endpoints. Correlación real de señales, menos ruido, mejor contexto al investigar incidentes.</p>
+          <p>Detección y respuesta extendida sobre correo, identidades, endpoints y SaaS. Correlación entre MDO, MDE, MDI y MDCA — menos ruido, mejor contexto al investigar incidentes.</p>
           <a href="/defender-xdr-pymes.html" class="bento-link">
             Ver servicio
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </article>
 
+        <article class="bento-card bento-feature reveal">
+          <span class="bento-feature-pill">
+            <span class="service-pill-dot" aria-hidden="true" style="width:6px;height:6px;background:var(--accent-bright);border-radius:50%;box-shadow:0 0 8px var(--accent-bright);display:inline-block;"></span>
+            Empieza aquí
+          </span>
+          <div class="bento-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Evaluación inicial</h3>
+          <p>Foto honesta de tu tenant en 5–10 días. Hallazgos priorizados, hoja de ruta y precio cerrado.</p>
+          <a href="/evaluacion-inicial-microsoft-365.html" class="bento-feature-cta">
+            Solicitar evaluación
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
         <article class="bento-card bento-medium reveal">
-          <span class="bento-tag">02</span>
+          <span class="bento-tag">SERVICIO · 02</span>
           <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
           </div>
           <h3>Purview</h3>
-          <p>Sensitivity labels, DLP y protección de información sensible alineada a tu negocio — no a una plantilla genérica.</p>
+          <p>Sensitivity labels, DLP y protección de información sensible alineada a tu negocio — taxonomía simple, roll-out audit → policy tip → enforcement.</p>
           <a href="/purview-pymes.html" class="bento-link">
             Ver servicio
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1007,49 +1082,14 @@
         </article>
 
         <article class="bento-card bento-medium reveal">
-          <span class="bento-tag">03</span>
+          <span class="bento-tag">SERVICIO · 03</span>
           <div class="bento-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
           </div>
           <h3>Intune</h3>
-          <p>Gestión centralizada de dispositivos y políticas de cumplimiento. Endpoints que sí pueden conectarse — y los que no, fuera.</p>
+          <p>Gestión centralizada de Windows, macOS, iOS y Android. Políticas de cumplimiento integradas con Conditional Access — equipos que cumplen o no acceden.</p>
           <a href="/intune-pymes.html" class="bento-link">
             Ver servicio
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </article>
-
-        <article class="bento-card bento-small reveal">
-          <span class="bento-tag">04</span>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          </div>
-          <h3>Defender for Identity</h3>
-          <p>Detección de comportamiento anómalo en AD híbrido y Entra ID.</p>
-        </article>
-
-        <article class="bento-card bento-small reveal">
-          <span class="bento-tag">05</span>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          </div>
-          <h3>Evaluación inicial</h3>
-          <p>Diagnóstico priorizado del tenant: brechas, prioridades, ruta realista.</p>
-          <a href="/evaluacion-inicial-microsoft-365.html" class="bento-link">
-            Empezar aquí
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-        </article>
-
-        <article class="bento-card bento-small reveal">
-          <span class="bento-tag">06</span>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <h3>Blog técnico</h3>
-          <p>Guías reales sobre seguridad Microsoft 365 — sin teoría inflada.</p>
-          <a href="/blog/" class="bento-link">
-            Leer blog
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </article>
